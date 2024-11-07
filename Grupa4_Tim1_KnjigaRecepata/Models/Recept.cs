@@ -13,7 +13,7 @@ namespace Grupa4_Tim1_KnjigaRecepata.Models {
         public int vrijemePripreme { get; set; }
         public Dictionary<Sastojak, double> sastojci {  get; set; }
         public KompleksnostPripreme kompleksnost {  get; set; }
-        //TODO: Implementacija ocjene fali
+        // TODO: Implementacija klase "Ocjena"
         public List<Ocjena> ocjene { get; set; }
 
         public Recept(int id, string name, VrstaJela tipRecepta, string priprema,

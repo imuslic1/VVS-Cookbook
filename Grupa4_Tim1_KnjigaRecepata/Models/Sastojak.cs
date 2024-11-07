@@ -19,7 +19,10 @@ namespace Grupa4_Tim1_KnjigaRecepata.Models
         public double jedinicnaCijena { get; set; }
         public MjernaJedinica mjernaJedinica { get; set; }
 
-        public Sastojak(int id, string naziv, double ugljikohidratiPoJedinici, double mastiPoJedinici, double proteiniPoJedinici, double vlaknaPoJedinici, double solPoJedinici, Alergen? alergen, double jedinicnaCijena, MjernaJedinica mjernaJedinica)
+        public Sastojak(int id, string naziv, double ugljikohidratiPoJedinici, 
+                        double mastiPoJedinici, double proteiniPoJedinici, 
+                        double vlaknaPoJedinici, double solPoJedinici, Alergen? alergen, 
+                        double jedinicnaCijena, MjernaJedinica mjernaJedinica)
         {
             this.id = id;
             this.naziv = naziv;
