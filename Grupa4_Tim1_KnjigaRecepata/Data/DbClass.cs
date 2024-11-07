@@ -10,10 +10,12 @@ namespace Grupa4_Tim1_KnjigaRecepata.Data
     public class DbClass
     {
         public List<Sastojak> sastojci { get; set; }
+        public List<Recept> recepti { get; set; }
 
         public DbClass() 
         { 
             sastojci = new List<Sastojak>();
+            recepti = new List<Recept>();
         }
         public void addSastojak(Sastojak sastojak)
         {
@@ -22,6 +24,14 @@ namespace Grupa4_Tim1_KnjigaRecepata.Data
         public Sastojak? getSastojak(int sastojakId)
         {
             return sastojci.FirstOrDefault(s => s.id == sastojakId);
+        }
+
+        public void addRecept(Recept recept) { 
+            recepti.Add(recept);
+        }
+
+        public Recept? getRecept(int receptId) {
+            return recepti.FirstOrDefault(s => s.id == receptId);
         }
     }
 }
