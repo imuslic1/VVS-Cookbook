@@ -92,6 +92,24 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
             //       mjerne jedinice prilikom ispisa recepta a preracunavanje jedinica bi se moglo 
             //       raditi pomocnom private metodom u klasi Recept.
         }
+
+        public void ocijeni(Recept recept)
+        {
+            int ocjena = 0;
+
+            Console.WriteLine("Unesite ocjenu za odabrani recept (1-5): ");
+            string unos = Console.ReadLine();
+
+            if(!int.TryParse(unos, out ocjena) || ocjena < 1 || ocjena > 5)
+            {
+                throw new Exception("Pogresan unos");
+            }
+
+            Console.WriteLine("Unesite komentar: ");
+            string komentar = Console.ReadLine();
+
+            recept.ocjene.Add(new Ocjena(recept.ocjene.Count, ocjena, komentar));     
+        }
         
     }
 }

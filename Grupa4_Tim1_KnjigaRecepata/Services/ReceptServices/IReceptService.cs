@@ -11,5 +11,6 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
         void prikazi(Recept recept);
         void prikaziAlergene(Recept recept);
         void konvertujMjerneJedinice(Recept recept);
+        void ocijeni(Recept recept);
     }
 }

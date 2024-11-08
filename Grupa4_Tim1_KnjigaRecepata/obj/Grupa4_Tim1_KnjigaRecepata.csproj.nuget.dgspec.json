@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Korisnik\\ETF_LV\\VVS_LV\\Projektni zadatak 1\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\Grupa4_Tim1_KnjigaRecepata.csproj": {}
+    "C:\\Users\\lamij\\Desktop\\Fakultet\\5. semestar\\VVS\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\Grupa4_Tim1_KnjigaRecepata.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Korisnik\\ETF_LV\\VVS_LV\\Projektni zadatak 1\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\Grupa4_Tim1_KnjigaRecepata.csproj": {
+    "C:\\Users\\lamij\\Desktop\\Fakultet\\5. semestar\\VVS\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\Grupa4_Tim1_KnjigaRecepata.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Korisnik\\ETF_LV\\VVS_LV\\Projektni zadatak 1\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\Grupa4_Tim1_KnjigaRecepata.csproj",
+        "projectUniqueName": "C:\\Users\\lamij\\Desktop\\Fakultet\\5. semestar\\VVS\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\Grupa4_Tim1_KnjigaRecepata.csproj",
         "projectName": "Grupa4_Tim1_KnjigaRecepata",
-        "projectPath": "C:\\Users\\Korisnik\\ETF_LV\\VVS_LV\\Projektni zadatak 1\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\Grupa4_Tim1_KnjigaRecepata.csproj",
-        "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Korisnik\\ETF_LV\\VVS_LV\\Projektni zadatak 1\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\obj\\",
+        "projectPath": "C:\\Users\\lamij\\Desktop\\Fakultet\\5. semestar\\VVS\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\Grupa4_Tim1_KnjigaRecepata.csproj",
+        "packagesPath": "C:\\Users\\lamij\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lamij\\Desktop\\Fakultet\\5. semestar\\VVS\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\lamij\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

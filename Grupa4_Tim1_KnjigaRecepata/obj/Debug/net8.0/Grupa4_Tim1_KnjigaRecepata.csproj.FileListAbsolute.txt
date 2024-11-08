@@ -12,3 +12,18 @@ C:\Users\esmak_4nlq9kx\source\repos\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\
 C:\Users\esmak_4nlq9kx\source\repos\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.pdb
 C:\Users\esmak_4nlq9kx\source\repos\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.genruntimeconfig.cache
 C:\Users\esmak_4nlq9kx\source\repos\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\ref\Grupa4_Tim1_KnjigaRecepata.dll
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.AssemblyInfoInputs.cache
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.AssemblyInfo.cs
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.csproj.CoreCompileInputs.cache
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.sourcelink.json
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.dll
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\refint\Grupa4_Tim1_KnjigaRecepata.dll
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.pdb
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\bin\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.exe
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\bin\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.deps.json
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\bin\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.runtimeconfig.json
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\bin\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.dll
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\bin\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.pdb
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\Grupa4_Tim1_KnjigaRecepata.genruntimeconfig.cache
+C:\Users\lamij\Desktop\Fakultet\5. semestar\VVS\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\obj\Debug\net8.0\ref\Grupa4_Tim1_KnjigaRecepata.dll
