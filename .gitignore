@@ -1,2 +1,15 @@
 .vsidx
 .vs
+*.dll
+*.exe
+*.pdb
+Grupa4_Tim1_KnjigaRecepata/obj/Debug/net8.0/Grupa4_Tim1_KnjigaRecepata.AssemblyInfo.cs
+Grupa4_Tim1_KnjigaRecepata/obj/Debug/net8.0/Grupa4_Tim1_KnjigaRecepata.AssemblyInfoInputs.cache
+*.cache
+Grupa4_Tim1_KnjigaRecepata/obj/Debug/net8.0/Grupa4_Tim1_KnjigaRecepata.csproj.FileListAbsolute.txt
+Grupa4_Tim1_KnjigaRecepata/obj/Debug/net8.0/Grupa4_Tim1_KnjigaRecepata.GeneratedMSBuildEditorConfig.editorconfig
+Grupa4_Tim1_KnjigaRecepata/obj/Debug/net8.0/Grupa4_Tim1_KnjigaRecepata.sourcelink.json
+Grupa4_Tim1_KnjigaRecepata/obj/Release/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+Grupa4_Tim1_KnjigaRecepata/obj/Release/net8.0/Grupa4_Tim1_KnjigaRecepata.AssemblyInfo.cs
+Grupa4_Tim1_KnjigaRecepata/obj/Release/net8.0/Grupa4_Tim1_KnjigaRecepata.GeneratedMSBuildEditorConfig.editorconfig
+Grupa4_Tim1_KnjigaRecepata/obj/Release/net8.0/Grupa4_Tim1_KnjigaRecepata.GlobalUsings.g.cs

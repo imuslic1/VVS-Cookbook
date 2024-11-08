@@ -11,5 +11,6 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.SastojakServices
     {
         double dajBrojKalorijaPoJedinici(Sastojak sastojak);
         void prikaziSastojak(Sastojak sastojak);
+        string dajSkracenicu(MjernaJedinica jedinica);
     }
 }

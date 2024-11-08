@@ -6,30 +6,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Grupa4_Tim1_KnjigaRecepata.Services.SastojakServices;
 
 namespace Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices
 {
     public class ShoppingListaService : IShoppingListaService
     {
         private readonly DbClass _db;
+        private readonly SastojakService _sastojakService;
 
-        private string DajSkracenicu(MjernaJedinica jedinica)
-        {
-            return jedinica switch
-            {
-                MjernaJedinica.CAJNA_KASIKA => "tsp",
-                MjernaJedinica.SUPENA_KASIKA => "tbsp",
-                MjernaJedinica.CASA => "cup",
-                MjernaJedinica.UNCA => "oz",
-                MjernaJedinica.MILILITAR => "ml",
-                MjernaJedinica.GRAM => "g",
-                _ => ""
-            };
-        }
-
-        public ShoppingListaService(DbClass db)
+        public ShoppingListaService(DbClass db, SastojakService sastojakService)
         {
             _db = db;
+            _sastojakService = sastojakService;
         }
 
         public void prikaziShoppingListu(ShoppingLista lista)
@@ -44,7 +33,7 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices
                 Sastojak s = sastojak.Key;
                 double kolicina = sastojak.Value;
                 cijena += kolicina * s.jedinicnaCijena;
-                sb.AppendLine("- " + s.naziv + ": " + kolicina + " " + DajSkracenicu(s.mjernaJedinica));
+                sb.AppendLine("- " + s.naziv + ": " + kolicina + " " + _sastojakService.dajSkracenicu(s.mjernaJedinica));
 
                 sb.AppendLine("Ukupni trosak: " + cijena);
             }

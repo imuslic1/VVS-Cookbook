@@ -24,10 +24,31 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.SastojakServices
 
         public void prikaziSastojak(Sastojak sastojak)
         {
-            Console.WriteLine("Sastojak: " + sastojak.naziv + "\nNutrijenti po jedinici\n- ugljikohidrati: " + sastojak.ugljikohidratiPoJedinici
-                + "\n- masti: " + sastojak.mastiPoJedinici + "\n- proteini: " + sastojak.proteiniPoJedinici 
-                + "\n- vlakna: " + sastojak.vlaknaPoJedinici + "\n- sol: " + sastojak.solPoJedinici + "\nAlergeni: "
-                + (sastojak.alergen == null ? "nema" : sastojak.alergen));
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Sastojak: " + sastojak.naziv);
+            sb.AppendLine("Nutrijenti po jedinici");
+            sb.AppendLine("- ugljikohidrati: " + sastojak.ugljikohidratiPoJedinici);
+            sb.AppendLine("- masti: " + sastojak.mastiPoJedinici);
+            sb.AppendLine("- proteini: " + sastojak.proteiniPoJedinici);
+            sb.AppendLine("- vlakna: " + sastojak.vlaknaPoJedinici);
+            sb.AppendLine("- sol: " + sastojak.solPoJedinici);
+            sb.AppendLine("Alergeni: " + (sastojak.alergen == null ? "nema" : sastojak.alergen));
+
+            Console.WriteLine(sb.ToString());
+        }
+
+        public string dajSkracenicu(MjernaJedinica jedinica)
+        {
+            return jedinica switch
+            {
+                MjernaJedinica.CAJNA_KASIKA => "tsp",
+                MjernaJedinica.SUPENA_KASIKA => "tbsp",
+                MjernaJedinica.CASA => "cup",
+                MjernaJedinica.UNCA => "oz",
+                MjernaJedinica.MILILITAR => "ml",
+                MjernaJedinica.GRAM => "g",
+                _ => ""
+            };
         }
     }
 }
