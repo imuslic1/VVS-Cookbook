@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Grupa4_Tim1_KnjigaRecepata")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25b328bcdfeebf0e6a89923d9b2f83e00a695bda")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39eb11d41750f0cf4510dc661ee071323dda4751")]
 [assembly: System.Reflection.AssemblyProductAttribute("Grupa4_Tim1_KnjigaRecepata")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Grupa4_Tim1_KnjigaRecepata")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
