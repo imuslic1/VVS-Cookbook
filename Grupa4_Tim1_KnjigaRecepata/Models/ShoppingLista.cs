@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Grupa4_Tim1_KnjigaRecepata.Models
 {
-    internal class ShoppingLista
+    public class ShoppingLista
     { 
         public Recept recept {  get; set; }
 
