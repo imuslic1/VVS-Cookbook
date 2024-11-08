@@ -13,18 +13,6 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
         private readonly DbClass _db;
         private readonly SastojakService _sastojakService;
 
-        private string DajSkracenicu(MjernaJedinica jedinica) {
-            return jedinica switch {
-                MjernaJedinica.CAJNA_KASIKA => "tsp",
-                MjernaJedinica.SUPENA_KASIKA => "tbsp",
-                MjernaJedinica.CASA => "cup",
-                MjernaJedinica.UNCA => "oz",
-                MjernaJedinica.MILILITAR => "ml",
-                MjernaJedinica.GRAM => "g",
-                _ => ""
-            };
-        }
-
         public ReceptService(DbClass db, SastojakService sastojakService) {
             _db = db;
             _sastojakService = sastojakService;
@@ -53,7 +41,7 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
             foreach (var sastojakEntry in recept.sastojci) {
                 Sastojak sastojak = sastojakEntry.Key;
                 double kolicina = sastojakEntry.Value;
-                sb.AppendLine("- " + sastojak.naziv + ": " + kolicina + " " + DajSkracenicu(sastojak.mjernaJedinica));
+                sb.AppendLine("- " + sastojak.naziv + ": " + kolicina + " " + _sastojakService.dajSkracenicu(sastojak.mjernaJedinica));
             }
 
             sb.AppendLine("Priprema: " + recept.priprema);
