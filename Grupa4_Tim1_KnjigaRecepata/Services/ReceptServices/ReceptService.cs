@@ -86,11 +86,23 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
             Console.WriteLine(sb.ToString());
         }
 
-        public void konvertujMjerneJedinice(Recept recept) {
-            // TODO: maybe implementirati sa jos jednim enumom {IMPERIAL, METRIC} 
-            //       kao parametrom u klasi Recept. Na taj nacin bi se mogao mijenjati ispis
-            //       mjerne jedinice prilikom ispisa recepta a preracunavanje jedinica bi se moglo 
-            //       raditi pomocnom private metodom u klasi Recept.
+        public void konvertujMjerneJedinice(Recept recept) { 
+
+            foreach (var sastojakEntry in recept.sastojci) {
+                Sastojak sastojak = sastojakEntry.Key;
+                double kolicina = sastojakEntry.Value;
+          
+                if (sastojak.mjernaJedinica == MjernaJedinica.CASA) {
+                    sastojak.mjernaJedinica = MjernaJedinica.GRAM;
+                    kolicina *= 236.59;
+                }
+                else if (sastojak.mjernaJedinica == MjernaJedinica.UNCA) {
+                    sastojak.mjernaJedinica = MjernaJedinica.MILILITAR;
+                    kolicina *= 29.57;
+                }
+
+                recept.sastojci[sastojak] = kolicina;
+            }
         }
 
         public void ocijeni(Recept recept)
