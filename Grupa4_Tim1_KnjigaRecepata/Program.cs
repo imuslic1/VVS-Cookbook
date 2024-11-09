@@ -1,5 +1,6 @@
 ﻿using Grupa4_Tim1_KnjigaRecepata.Data;
 using Grupa4_Tim1_KnjigaRecepata.Models;
+using Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices;
 using Grupa4_Tim1_KnjigaRecepata.Services.OcjenaServices;
 using Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices;
 using Grupa4_Tim1_KnjigaRecepata.Services.SastojakServices;
@@ -18,10 +19,10 @@ namespace Grupa4_Tim1_KnjigaRecepata
             ReceptService rs = new ReceptService(baza, ss);
 
             // TODO: Implementacija klase "KnjigaRecepataService"
-            //KnjigaRecepataService kr = new KnjigaRecepataService();
             
             OcjenaService oc = new OcjenaService();
             ShoppingListaService sl = new ShoppingListaService(baza, ss);
+            KnjigaRecepataService kr = new KnjigaRecepataService(baza, rs, oc);
 
             Sastojak sastojak1 = new Sastojak(1, "mlijeko", 4, 2, 5, 3, 4, null, 4, MjernaJedinica.CAJNA_KASIKA);
             Dictionary<Sastojak, double> sastojci = new Dictionary<Sastojak, double>();
@@ -40,17 +41,25 @@ namespace Grupa4_Tim1_KnjigaRecepata
             // NOTICE: Cijeli kod za meni je subject to change, ovo je osnovna napamet sklepana verzija.
 
             // Da, koristio sam flagove i goto :P
+
+            // ADDITION: Vodio sam se enumom VrstaJela i za tipove KnjigeRecepata, tkd sam dodao i 5 mogućih odabira knjiga recepata!
+            
+            // NOTICE: Imo ovdje switchevi nisu potrebni jer se za svaku knjigu recepata isti meni treba nuditi logički so yeah,
+            // rather uzeti samo odabir trenutne "glavne knjige recepata". 
         prviMeni:
             Console.WriteLine("\nDobrodošli u kuharicu!\n");
             Console.WriteLine("Odaberite željenu knjigu: ");
-            Console.WriteLine("1. Slana jela");
-            Console.WriteLine("2. Deserti");
+            Console.WriteLine("1. Predjela");
+            Console.WriteLine("2. Glavna jela");
+            Console.WriteLine("3. Deserti");
+            Console.WriteLine("4. Prilozi");
+            Console.WriteLine("5. Salate");
             Console.WriteLine("\n0. Izlaz");
             int prvaOpcija = Convert.ToInt32(Console.ReadLine());
             
             switch(prvaOpcija) {
                 case 1:
-                    Console.WriteLine("\nOdabrali ste knjigu sa slanim jelima.\n");
+                    Console.WriteLine("\nOdabrali ste knjigu sa predjelima.\n");
                     Console.WriteLine("1. Pretraga recepata po nazivu");
                     Console.WriteLine("2. Pretraga recepata po ocjeni");
                     Console.WriteLine("3. Odabir vrste recepta");
@@ -110,7 +119,7 @@ namespace Grupa4_Tim1_KnjigaRecepata
                     }
                     break;
                 case 2:
-                    Console.WriteLine("Odabrali ste knjigu sa desertima.");
+                    Console.WriteLine("Odabrali ste knjigu sa glavnim jelima.");
                     break;
                 default:
                     Console.WriteLine("Izlaz iz kuharice.");

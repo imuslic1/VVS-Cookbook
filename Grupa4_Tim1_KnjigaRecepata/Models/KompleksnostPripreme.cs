@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Grupa4_Tim1_KnjigaRecepata.Models {
     public enum KompleksnostPripreme {
-        LAKO,
-        SREDNJE_TESKO,
-        TESKO,
-        PROFESIONALAC
+        LAKO = 1,
+        SREDNJE_TESKO = 2,
+        TESKO = 3,
+        PROFESIONALAC = 4
     }
 }

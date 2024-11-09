@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ismar\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ismar\\Desktop\\chest\\faks\\III godina\\5. semestar\\VVS\\Projekat1\\repo\\Grupa4_Tim1_KnjigaRecepata\\Grupa4_Tim1_KnjigaRecepata.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Fax\\Verifikacija i validacija softvera\\Projekat1_Kod\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\Grupa4_Tim1_KnjigaRecepata.csproj",
       "projectName": "Grupa4_Tim1_KnjigaRecepata",
-      "projectPath": "C:\\Users\\ismar\\Desktop\\chest\\faks\\III godina\\5. semestar\\VVS\\Projekat1\\repo\\Grupa4_Tim1_KnjigaRecepata\\Grupa4_Tim1_KnjigaRecepata.csproj",
-      "packagesPath": "C:\\Users\\ismar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ismar\\Desktop\\chest\\faks\\III godina\\5. semestar\\VVS\\Projekat1\\repo\\Grupa4_Tim1_KnjigaRecepata\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\Fax\\Verifikacija i validacija softvera\\Projekat1_Kod\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\Grupa4_Tim1_KnjigaRecepata.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Fax\\Verifikacija i validacija softvera\\Projekat1_Kod\\VVS-projekat1\\Grupa4_Tim1_KnjigaRecepata\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ismar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,6 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -66,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
