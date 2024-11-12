@@ -70,7 +70,7 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices
         }
         public Recept pretraziKnjiguRecepata(KnjigaRecepata knjigaRecepata, String naziv)
         {
-            var listaIstih = knjigaRecepata.recepti.Where(r => r.name == naziv);
+            var listaIstih = knjigaRecepata.recepti.Where(r => r.name.ToLower() == naziv.ToLower());
             var recept = listaIstih.FirstOrDefault();
             if (recept == null)
             {

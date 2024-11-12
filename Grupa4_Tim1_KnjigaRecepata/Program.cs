@@ -100,7 +100,7 @@ namespace Grupa4_Tim1_KnjigaRecepata
         new Dictionary<Sastojak, double> { { sastojci[6], 1 } },
         KompleksnostPripreme.LAKO, ocjene1),
 
-    new Recept(10, "spageti sa maslacem i cesnjakom", VrstaJela.GLAVNO_JELO,
+    new Recept(10, "Spageti sa maslacem i cesnjakom", VrstaJela.GLAVNO_JELO,
         "Skuhajte špagete, pomiješajte s maslacem i češnjakom.", 20,
         new Dictionary<Sastojak, double> { { sastojci[2], 30 }, { sastojci[6], 0.5 } },
         KompleksnostPripreme.LAKO, ocjene6),
