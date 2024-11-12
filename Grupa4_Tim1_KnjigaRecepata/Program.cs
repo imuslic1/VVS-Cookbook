@@ -236,6 +236,7 @@ namespace Grupa4_Tim1_KnjigaRecepata
                         }
                         break;
                     case 2:
+                        Console.WriteLine("Unesite naziv recepta: ");
                         Boolean korektanNaziv2 = false;
                         Recept trazeniRecept = null;
                         while (!korektanNaziv2)
@@ -347,17 +348,21 @@ namespace Grupa4_Tim1_KnjigaRecepata
                                 for (int i = 0; i < sastojci.Count; i++) {
                                     if (sastojci[i].naziv == nazivSastojka) { 
                                         trazeniSastojak = sastojci[i];
+                                        korektanNaziv = true;
                                         break;
                                     }
                                 }
                                 if (trazeniSastojak != null) { 
                                     ss.prikaziSastojak(trazeniSastojak);
                                 }
+                                else {
+                                    Console.WriteLine("Takav sastojak ne postoji u našoj bazi!");
+                                    Console.WriteLine("Unesite ponovo naziv: ");
+                                }
                             }
                             catch(Exception ex)
                             {
-                                Console.WriteLine("Takav sastojak ne postoji u našoj bazi!");
-                                Console.WriteLine("Unesite ponovo naziv: ");
+                                //hendlovanoo!!!
                             }
                         }
                         break;
