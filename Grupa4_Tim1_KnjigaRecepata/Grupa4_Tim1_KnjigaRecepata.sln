@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grupa4_Tim1_KnjigaRecepata", "Grupa4_Tim1_KnjigaRecepata.csproj", "{3E138CDA-D0FB-4602-8C0F-E0ED3069DE00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grupa4_Tim1_KnjigaRecepata", "Grupa4_Tim1_KnjigaRecepata.csproj", "{3E138CDA-D0FB-4602-8C0F-E0ED3069DE00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnjigaRecepataTest", "..\KnjigaRecepataTest\KnjigaRecepataTest.csproj", "{4BB3730B-6F26-42AF-A7A0-4C1FEE0EF189}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3E138CDA-D0FB-4602-8C0F-E0ED3069DE00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E138CDA-D0FB-4602-8C0F-E0ED3069DE00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E138CDA-D0FB-4602-8C0F-E0ED3069DE00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB3730B-6F26-42AF-A7A0-4C1FEE0EF189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB3730B-6F26-42AF-A7A0-4C1FEE0EF189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB3730B-6F26-42AF-A7A0-4C1FEE0EF189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB3730B-6F26-42AF-A7A0-4C1FEE0EF189}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

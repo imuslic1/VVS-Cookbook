@@ -39,9 +39,9 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices
             StringBuilder sb = new StringBuilder();
 
             if (lista.recept.sastojci == null || lista.recept.sastojci.Count == 0)
-                throw new Exception("Nemoguce izracunati cijenu - lista sastojaka je prazna");
+                throw new ArgumentException("Nemoguce izracunati cijenu - lista sastojaka je prazna");
 
-            sb.AppendLine("Kako biste pripremili " + lista.recept.name + "potrebno je da kupite:");
+            sb.AppendLine("Kako biste pripremili " + lista.recept.name + " potrebno je da kupite:");
 
             foreach (var sastojak in lista.recept.sastojci)
             {

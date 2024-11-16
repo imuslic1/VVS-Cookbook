@@ -271,7 +271,7 @@ namespace Grupa4_Tim1_KnjigaRecepata
                                 korektanNaziv3 = true;
 
                             }
-                            catch (Exception ex) { Console.WriteLine(ex.Message); Console.WriteLine("Unesite ponovno naziv recepta: "); }
+                            catch (ArgumentException ex) { Console.WriteLine(ex.Message); Console.WriteLine("Unesite ponovno naziv recepta: "); }
                         }
                         ShoppingLista shoppingLista = new ShoppingLista(trazeniRecept1);
                         try
