@@ -9,6 +9,7 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices
 {
     public interface IShoppingListaService
     {
-        void prikaziShoppingListu(ShoppingLista list);
+        string prikaziShoppingListu(ShoppingLista list);
+        double cijenaSastojaka(Recept recept);
     }
 }

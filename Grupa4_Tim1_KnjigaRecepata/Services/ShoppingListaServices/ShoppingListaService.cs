@@ -21,10 +21,25 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices
             _sastojakService = sastojakService;
         }
 
-        public void prikaziShoppingListu(ShoppingLista lista)
+        public double cijenaSastojaka(Recept recept)
+        {
+            double suma = 0.0;
+
+            foreach (var sastojak in recept.sastojci)
+            {
+                Sastojak s = sastojak.Key;
+                suma += s.jedinicnaCijena * sastojak.Value;
+            }
+
+            return suma;
+        }
+
+        public string prikaziShoppingListu(ShoppingLista lista)
         {
             StringBuilder sb = new StringBuilder();
-            double cijena=0.0;
+
+            if (lista.recept.sastojci == null || lista.recept.sastojci.Count == 0)
+                throw new Exception("Nemoguce izracunati cijenu - lista sastojaka je prazna");
 
             sb.AppendLine("Kako biste pripremili " + lista.recept.name + "potrebno je da kupite:");
 
@@ -32,11 +47,12 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices
             {
                 Sastojak s = sastojak.Key;
                 double kolicina = sastojak.Value;
-                cijena += kolicina * s.jedinicnaCijena;
                 sb.AppendLine("- " + s.naziv + ": " + kolicina + " " + _sastojakService.dajSkracenicu(s.mjernaJedinica));
-
-                sb.AppendLine("Ukupni trosak: " + cijena);
             }
+
+            sb.AppendLine("Ukupni trosak: " + cijenaSastojaka(lista.recept));
+
+            return sb.ToString();
         }
     }
 }
