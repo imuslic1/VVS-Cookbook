@@ -8,11 +8,13 @@ using Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices;
 using System;
 using System.Runtime.Versioning;
 using System.Security.Cryptography.X509Certificates;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Grupa4_Tim1_KnjigaRecepata
 {
     internal class Program
     {
+        [ExcludeFromCodeCoverage]
 
         static void Main(string[] args)
         {
