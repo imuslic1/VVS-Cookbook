@@ -17,13 +17,22 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.SastojakServices
             _db = db;
         }
 
-        public double dajBrojKalorijaPoJedinici(Sastojak sastojak)
+        public double dajBrojKalorijaPoJedinici(Sastojak? sastojak)
         {
+            if(sastojak == null)
+            {
+                throw new ArgumentNullException("Nije moguce izracunati broj kalorija za ovaj sastojak!");
+            }
             return sastojak.ugljikohidratiPoJedinici * 4 + sastojak.mastiPoJedinici * 9 + sastojak.proteiniPoJedinici * 4 + sastojak.vlaknaPoJedinici * 2;
         }
 
-        public void prikaziSastojak(Sastojak sastojak)
+        public void prikaziSastojak(Sastojak? sastojak)
         {
+            if (sastojak == null)
+            {
+                throw new ArgumentNullException(null, "Sastojak nije validan!");
+            }
+
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("Sastojak: " + sastojak.naziv);
             sb.AppendLine("Nutrijenti po jedinici");
