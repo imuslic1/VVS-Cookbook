@@ -11,9 +11,18 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.OcjenaServices
     {
         public double dajProsjecnuOcjenu(List<Ocjena> ocjene)
         {
+            if(ocjene == null)
+            {
+                throw new NullReferenceException();
+            }
+
             double suma = 0;
             for (int i = 0; i < ocjene.Count; i++)
             {
+                if(ocjene[i].ocjena < 1 || ocjene[i].ocjena > 5)
+                {
+                    throw new ArgumentNullException();
+                }
                 suma += ocjene[i].ocjena;
             }
 

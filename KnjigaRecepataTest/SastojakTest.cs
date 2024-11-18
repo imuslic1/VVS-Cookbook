@@ -50,20 +50,20 @@ namespace KnjigaRecepataTest
 			Assert.AreEqual(expected, sastojakService.dajSkracenicu(mjernaJedinica));
 		}
 
-		public static IEnumerable<object[]> GeneratePrikazSastojkaTestData
-		{
+        public static IEnumerable<object[]> GeneratePrikazSastojkaTestData
+        {
             get
             {
                 return new[]
                 {
-                    new object[] { new Sastojak(1, "Krompir", 17, 0.1, 2, 1.8, 3, null, 2, MjernaJedinica.GRAM), "Sastojak: Krompir\nNutrijenti po jedinici\n- ugljikohidrati: 17\n- masti: 0,1\n- proteini: 2\n- vlakna: 1,8\n- sol: 3\nAlergeni: nema" },
-                    new object[] { new Sastojak(2, "Kravlje mlijeko", 4.7, 3.6, 3.2, 0, 0, Alergen.LAKTOZA, 2.3, MjernaJedinica.MILILITAR), "Sastojak: Kravlje mlijeko\nNutrijenti po jedinici\n- ugljikohidrati: 4,7\n- masti: 3,6\n- proteini: 3,2\n- vlakna: 0\n- sol: 0\nAlergeni: LAKTOZA" },
-					new object[] { new Sastojak(1, "Bijelo brasno", 70, 1, 10, 3, 0.01, Alergen.GLUTEN, 2, MjernaJedinica.GRAM), "Sastojak: Bijelo brasno\nNutrijenti po jedinici\n- ugljikohidrati: 70\n- masti: 1\n- proteini: 10\n- vlakna: 3\n- sol: 0,01\nAlergeni: GLUTEN" },
+                    new object[] { new Sastojak(1, "Krompir", 17, 0.1, 2, 1.8, 3, null, 2, MjernaJedinica.GRAM), "Sastojak: Krompir\nNutrijenti po jedinici\n- ugljikohidrati: 17\n- masti: 0.1\n- proteini: 2\n- vlakna: 1.8\n- sol: 3\nAlergeni: nema" },
+                    new object[] { new Sastojak(2, "Kravlje mlijeko", 4.7, 3.6, 3.2, 0, 0, Alergen.LAKTOZA, 2.3, MjernaJedinica.MILILITAR), "Sastojak: Kravlje mlijeko\nNutrijenti po jedinici\n- ugljikohidrati: 4.7\n- masti: 3.6\n- proteini: 3.2\n- vlakna: 0\n- sol: 0\nAlergeni: LAKTOZA" },
+					new object[] { new Sastojak(1, "Bijelo brasno", 70, 1, 10, 3, 0.01, Alergen.GLUTEN, 2, MjernaJedinica.GRAM), "Sastojak: Bijelo brasno\nNutrijenti po jedinici\n- ugljikohidrati: 70\n- masti: 1\n- proteini: 10\n- vlakna: 3\n- sol: 0.01\nAlergeni: GLUTEN" },
 					new object[] { new Sastojak(2, "Kikiriki", 10, 50, 25, 8, 0, Alergen.ORASASTI_PLODOVI, 2, MjernaJedinica.GRAM), "Sastojak: Kikiriki\nNutrijenti po jedinici\n- ugljikohidrati: 10\n- masti: 50\n- proteini: 25\n- vlakna: 8\n- sol: 0\nAlergeni: ORASASTI_PLODOVI" },
-					new object[] { new Sastojak(3, "Med", 80, 0, 0, 0, 0.02, Alergen.MED, 2, MjernaJedinica.GRAM), "Sastojak: Med\nNutrijenti po jedinici\n- ugljikohidrati: 80\n- masti: 0\n- proteini: 0\n- vlakna: 0\n- sol: 0,02\nAlergeni: MED" }
-				};
+					new object[] { new Sastojak(3, "Med", 80, 0, 0, 0, 0.02, Alergen.MED, 2, MjernaJedinica.GRAM), "Sastojak: Med\nNutrijenti po jedinici\n- ugljikohidrati: 80\n- masti: 0\n- proteini: 0\n- vlakna: 0\n- sol: 0.02\nAlergeni: MED" }
+};
             }
-		}
+        }
 
         [TestMethod]
         [DynamicData(nameof(GeneratePrikazSastojkaTestData))]
