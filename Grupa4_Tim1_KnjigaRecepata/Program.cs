@@ -245,15 +245,15 @@ namespace Grupa4_Tim1_KnjigaRecepata
                                 naziv = Convert.ToString(Console.ReadLine());
                                 trazeniRecept = kr.pretraziKnjiguRecepata(knjigeRecepata[indeksTrenutneKnjige], naziv);
                                 korektanNaziv2 = true;
+                                Console.WriteLine("Unesite ocjenu recepta: ");
+                                int ocjena = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine("Unesite komentar uz Vašu ocjenu: ");
+                                string komentar = Convert.ToString(Console.ReadLine());
+                                rs.ocijeni(trazeniRecept, new Ocjena(new Random().Next(), ocjena, komentar));
 
                             }
-                            catch (Exception ex) { Console.WriteLine(ex.Message); Console.WriteLine("Unesite ponovno naziv recepta: "); }
+                            catch (Exception ex) { Console.WriteLine(ex.Message); break; }
                         }
-                        Console.WriteLine("Unesite ocjenu recepta: ");
-                        int ocjena = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Unesite komentar uz Vašu ocjenu: ");
-                        string komentar = Convert.ToString(Console.ReadLine());
-                        oc.dodajOcjenu(trazeniRecept, new Ocjena(new Random().Next(), ocjena, komentar));
                         break;
 
                     case 3:
@@ -276,7 +276,7 @@ namespace Grupa4_Tim1_KnjigaRecepata
                         {
                             Console.WriteLine(sl.prikaziShoppingListu(shoppingLista));
                         }
-                        catch (Exception ex) { Console.WriteLine(ex.Message); }
+                        catch (Exception ex) { Console.WriteLine(ex.Message); break; }
                         
                         break;
 
@@ -443,13 +443,17 @@ namespace Grupa4_Tim1_KnjigaRecepata
                     case 7:
                         Console.WriteLine("Unesite minimalnu ocjenu koju želite da recepti posjeduju: ");
                         double unesenaOcjena = Convert.ToDouble(Console.ReadLine());
-                        var listaRecepata = kr.pretraziKnjiguRecepata(knjigeRecepata[indeksTrenutneKnjige], unesenaOcjena);
-                        foreach(var recept in listaRecepata)
-                        {
-                            rs.prikazi(recept);
+                        try {
+                            var listaRecepata = kr.pretraziKnjiguRecepata(knjigeRecepata[indeksTrenutneKnjige], unesenaOcjena);
+                            foreach (var recept in listaRecepata) {
+                                rs.prikazi(recept);
+                            }
+                        } catch(Exception ex) {
+                            Console.WriteLine(ex.Message);
+                            break;
                         }
-                        break;
 
+                        break;
                     case 8:
                         kr.ispisiKnjiguRecepata(knjigeRecepata[indeksTrenutneKnjige]);
                         break;

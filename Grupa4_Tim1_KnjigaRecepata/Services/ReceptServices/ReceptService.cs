@@ -59,10 +59,10 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
 
             HashSet<Alergen> alergeni = new HashSet<Alergen>();
 
-            foreach(var sastojakEntry in recept.sastojci) {
+            foreach (var sastojakEntry in recept.sastojci) {
                 Sastojak sastojak = sastojakEntry.Key;
 
-                if(sastojak.alergen.HasValue)
+                if (sastojak.alergen.HasValue)
                     alergeni.Add(sastojak.alergen.Value);
             }
 
@@ -74,12 +74,12 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
             Console.WriteLine(sb.ToString());
         }
 
-        public void konvertujMjerneJedinice(Recept recept) { 
+        public void konvertujMjerneJedinice(Recept recept) {
 
             foreach (var sastojakEntry in recept.sastojci) {
                 Sastojak sastojak = sastojakEntry.Key;
                 double kolicina = sastojakEntry.Value;
-          
+
                 if (sastojak.mjernaJedinica == MjernaJedinica.CASA) {
                     sastojak.mjernaJedinica = MjernaJedinica.GRAM;
                     kolicina *= 236.59;
@@ -93,22 +93,10 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
             }
         }
 
-        public void ocijeni(Recept recept)
-        {
-            int ocjena = 0;
-
-            Console.WriteLine("Unesite ocjenu za odabrani recept (1-5): ");
-            string unos = Console.ReadLine();
-
-            if(!int.TryParse(unos, out ocjena) || ocjena < 1 || ocjena > 5)
-            {
-                throw new Exception("Pogresan unos");
-            }
-
-            Console.WriteLine("Unesite komentar: ");
-            string komentar = Console.ReadLine();
-
-            recept.ocjene.Add(new Ocjena(recept.ocjene.Count, ocjena, komentar));     
+        public void ocijeni(Recept recept, Ocjena ocjena) { 
+            if(ocjena.ocjena < 1 || ocjena.ocjena > 5)
+                throw new Exception("Ocjena mora biti u rasponu od 1 do 5.");
+            recept.ocjene.Add(ocjena);     
         }
         
     }
