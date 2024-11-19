@@ -32,7 +32,7 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
         public void prikazi(Recept recept) {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("Recept: " + recept.name);
+            sb.AppendLine("\n\nRecept: " + recept.name);
             sb.AppendLine("Vrsta jela: " + recept.tipRecepta);
             sb.AppendLine("Vrijeme pripreme: " + recept.vrijemePripreme + " minuta");
             sb.AppendLine("Kompleksnost pripreme: " + recept.kompleksnost);
@@ -46,9 +46,10 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
 
             sb.AppendLine("Priprema: " + recept.priprema);
 
-            // TODO: dovrsiti implementaciju za ispis podataka o ocjeni
-            //       kada klasa "Ocjena" bude zavrsena
-
+            sb.AppendLine("\nOcjene:");
+            foreach (var ocjena in recept.ocjene) {
+                sb.AppendLine("- " + ocjena.ocjena + "/5: " + ocjena.komentar);
+            }
 
             Console.WriteLine(sb.ToString());
         }
