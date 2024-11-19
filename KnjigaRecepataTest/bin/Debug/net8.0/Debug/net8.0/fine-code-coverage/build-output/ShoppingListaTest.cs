@@ -96,7 +96,7 @@ namespace KnjigaRecepataTest
         public void PrikaziShoppingListu()
         {
             ShoppingLista lista = new ShoppingLista(r1);
-            string expected1 = "Kako biste pripremili Pohovana piletina potrebno je da kupite:\r\n- Brašno: 100 g\r\n- Mlijeko: 1 ml\r\n- Sol: 1 tsp\r\n- Piletina: 150 g\r\nUkupni trosak: 350,85\r\n";
+            string expected1 = "Kako biste pripremili Pohovana piletina potrebno je da kupite:\r\n- Brašno: 100 g\r\n- Mlijeko: 1 ml\r\n- Sol: 1 tsp\r\n- Piletina: 150 g\r\nUkupni trosak: 350.85\r\n";
             string actual1 = sl.prikaziShoppingListu(lista);
 
             Assert.AreEqual(expected1, actual1);

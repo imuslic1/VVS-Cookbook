@@ -25,25 +25,28 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices
         }
         public void dodajRecept(KnjigaRecepata knjigaRecepata, Recept recept)
         {
-            if (knjigaRecepata.tip != recept.tipRecepta)
+            if (knjigaRecepata.tip == recept.tipRecepta)
+            {
+                knjigaRecepata.recepti.Add(recept);
+            }
+            else
             {
                 throw new ArgumentException("Tip knjige i tip recepta moraju biti isti!");
             }
-            knjigaRecepata.recepti.Add(recept);
         }
         public void sortirajPremaVremenuPripreme(KnjigaRecepata knjigaRecepata)
         {
-            knjigaRecepata.recepti.OrderBy(r => r.vrijemePripreme).ToList();
+            knjigaRecepata.recepti = knjigaRecepata.recepti.OrderBy(r => r.vrijemePripreme).ToList();
             knjigaRecepata.sortirana = true;
         }
         public void sortirajPremaKompleksnosti(KnjigaRecepata knjigaRecepata)
         {
-            knjigaRecepata.recepti.OrderBy(r => r.kompleksnost).ToList();
+            knjigaRecepata.recepti = knjigaRecepata.recepti.OrderBy(r => r.kompleksnost).ToList();
             knjigaRecepata.sortirana = true;
         }
         public void sortirajPremaNazivu(KnjigaRecepata knjigaRecepata)
         {
-            knjigaRecepata.recepti.OrderBy(r => r.name).ToList();
+            knjigaRecepata.recepti = knjigaRecepata.recepti.OrderBy(r => r.name).ToList();
             knjigaRecepata.sortirana = true;
         }
         // NOTICE: Mrvicu je nelogično da se (kako je navedeno u specifikaciji) vrši ispis isključivo po nazivu, jer onda

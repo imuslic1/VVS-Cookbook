@@ -18,5 +18,11 @@ namespace Grupa4_Tim1_KnjigaRecepata.Models
             this.tip = tip; 
             this.recepti = recepti;
         }
+        public KnjigaRecepata(int id, VrstaJela tip, List<Recept> recepti, bool sortirana){
+            this.id = id;
+            this.tip = tip;
+            this.recepti = recepti;
+            this.sortirana = sortirana;
+        }
     }
 }
