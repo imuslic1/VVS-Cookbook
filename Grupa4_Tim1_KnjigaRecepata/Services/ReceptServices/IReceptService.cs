@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
     public interface IReceptService {
         double dajUkupanBrojKalorija(Recept recept);
-        void prikazi(Recept recept);
-        void prikaziAlergene(Recept recept);
+        string prikazi(Recept recept);
+        string prikaziAlergene(Recept recept);
         void konvertujMjerneJedinice(Recept recept);
         void ocijeni(Recept recept);
     }

@@ -29,7 +29,7 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
             return ukupanBrojKalorija;
         }
 
-        public void prikazi(Recept recept) {
+        public string prikazi(Recept recept) {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("\n\nRecept: " + recept.name);
@@ -52,9 +52,10 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
             }
 
             Console.WriteLine(sb.ToString());
+            return sb.ToString();
         }
 
-        public void prikaziAlergene(Recept recept) {
+        public string prikaziAlergene(Recept recept) {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("*** ALERGENI ***");
 
@@ -73,6 +74,8 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
             if (alergeni.Contains(Alergen.MED)) sb.AppendLine("- MED");
 
             Console.WriteLine(sb.ToString());
+
+            return sb.ToString();
         }
 
         public void konvertujMjerneJedinice(Recept recept) { 
