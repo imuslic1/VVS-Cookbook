@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.9589" branch-rate="0.8876000000000001" version="1.9" timestamp="1732105836" lines-covered="700" lines-valid="730" branches-covered="79" branches-valid="89">
+<coverage line-rate="0.9645999999999999" branch-rate="0.9101" version="1.9" timestamp="1732105875" lines-covered="709" lines-valid="735" branches-covered="81" branches-valid="89">
   <sources>
     <source>C:\Users\ismar\</source>
   </sources>
   <packages>
-    <package name="Grupa4_Tim1_KnjigaRecepata" line-rate="0.9389" branch-rate="0.8904000000000001" complexity="119">
+    <package name="Grupa4_Tim1_KnjigaRecepata" line-rate="0.9517" branch-rate="0.9178000000000001" complexity="119">
       <classes>
         <class name="Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices.ShoppingListaService" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Services\ShoppingListaServices\ShoppingListaService.cs" line-rate="1" branch-rate="1" complexity="9">
           <methods>
@@ -238,7 +238,7 @@
             <line number="19" hits="5" branch="False" />
           </lines>
         </class>
-        <class name="Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices.ReceptService" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Services\ReceptServices\ReceptService.cs" line-rate="0.9142" branch-rate="0.7857" complexity="29">
+        <class name="Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices.ReceptService" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Services\ReceptServices\ReceptService.cs" line-rate="0.9714" branch-rate="0.8571" complexity="29">
           <methods>
             <method name="dajUkupanBrojKalorija" signature="(Grupa4_Tim1_KnjigaRecepata.Models.Recept)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
@@ -364,27 +364,27 @@
                 <line number="98" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="ocijeni" signature="(Grupa4_Tim1_KnjigaRecepata.Models.Recept,Grupa4_Tim1_KnjigaRecepata.Models.Ocjena)" line-rate="0" branch-rate="0" complexity="4">
+            <method name="ocijeni" signature="(Grupa4_Tim1_KnjigaRecepata.Models.Recept,Grupa4_Tim1_KnjigaRecepata.Models.Ocjena)" line-rate="0.6666" branch-rate="0.5" complexity="4">
               <lines>
-                <line number="101" hits="0" branch="False" />
-                <line number="102" hits="0" branch="True" condition-coverage="0% (0/4)">
+                <line number="101" hits="1" branch="False" />
+                <line number="102" hits="1" branch="True" condition-coverage="50% (2/4)">
                   <conditions>
-                    <condition number="8" type="jump" coverage="0%" />
-                    <condition number="24" type="jump" coverage="0%" />
+                    <condition number="8" type="jump" coverage="50%" />
+                    <condition number="24" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="103" hits="0" branch="False" />
                 <line number="104" hits="0" branch="False" />
-                <line number="106" hits="0" branch="False" />
-                <line number="107" hits="0" branch="False" />
+                <line number="106" hits="1" branch="False" />
+                <line number="107" hits="1" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(Grupa4_Tim1_KnjigaRecepata.Data.DbClass,Grupa4_Tim1_KnjigaRecepata.Services.SastojakServices.SastojakService)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="14" branch="False" />
-                <line number="17" hits="7" branch="False" />
-                <line number="18" hits="7" branch="False" />
-                <line number="19" hits="7" branch="False" />
+                <line number="16" hits="16" branch="False" />
+                <line number="17" hits="8" branch="False" />
+                <line number="18" hits="8" branch="False" />
+                <line number="19" hits="8" branch="False" />
               </lines>
             </method>
           </methods>
@@ -497,21 +497,21 @@
             <line number="96" hits="8" branch="False" />
             <line number="97" hits="8" branch="False" />
             <line number="98" hits="2" branch="False" />
-            <line number="101" hits="0" branch="False" />
-            <line number="102" hits="0" branch="True" condition-coverage="0% (0/4)">
+            <line number="101" hits="1" branch="False" />
+            <line number="102" hits="1" branch="True" condition-coverage="50% (2/4)">
               <conditions>
-                <condition number="8" type="jump" coverage="0%" />
-                <condition number="24" type="jump" coverage="0%" />
+                <condition number="8" type="jump" coverage="50%" />
+                <condition number="24" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="103" hits="0" branch="False" />
             <line number="104" hits="0" branch="False" />
-            <line number="106" hits="0" branch="False" />
-            <line number="107" hits="0" branch="False" />
-            <line number="16" hits="14" branch="False" />
-            <line number="17" hits="7" branch="False" />
-            <line number="18" hits="7" branch="False" />
-            <line number="19" hits="7" branch="False" />
+            <line number="106" hits="1" branch="False" />
+            <line number="107" hits="1" branch="False" />
+            <line number="16" hits="16" branch="False" />
+            <line number="17" hits="8" branch="False" />
+            <line number="18" hits="8" branch="False" />
+            <line number="19" hits="8" branch="False" />
           </lines>
         </class>
         <class name="Grupa4_Tim1_KnjigaRecepata.Services.OcjenaServices.OcjenaService" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Services\OcjenaServices\OcjenaService.cs" line-rate="1" branch-rate="1" complexity="11">
@@ -868,40 +868,40 @@
           <methods>
             <method name="get_id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="11" hits="57" branch="False" />
+                <line number="11" hits="58" branch="False" />
               </lines>
             </method>
             <method name="get_ocjena" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="141" branch="False" />
+                <line number="12" hits="145" branch="False" />
               </lines>
             </method>
             <method name="get_komentar" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="13" hits="63" branch="False" />
+                <line number="13" hits="64" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.Int32,System.Int32,System.String)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="15" hits="57" branch="False" />
-                <line number="16" hits="57" branch="False" />
-                <line number="17" hits="57" branch="False" />
-                <line number="18" hits="57" branch="False" />
-                <line number="19" hits="57" branch="False" />
-                <line number="20" hits="57" branch="False" />
+                <line number="15" hits="58" branch="False" />
+                <line number="16" hits="58" branch="False" />
+                <line number="17" hits="58" branch="False" />
+                <line number="18" hits="58" branch="False" />
+                <line number="19" hits="58" branch="False" />
+                <line number="20" hits="58" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="11" hits="57" branch="False" />
-            <line number="12" hits="141" branch="False" />
-            <line number="13" hits="63" branch="False" />
-            <line number="15" hits="57" branch="False" />
-            <line number="16" hits="57" branch="False" />
-            <line number="17" hits="57" branch="False" />
-            <line number="18" hits="57" branch="False" />
-            <line number="19" hits="57" branch="False" />
-            <line number="20" hits="57" branch="False" />
+            <line number="11" hits="58" branch="False" />
+            <line number="12" hits="145" branch="False" />
+            <line number="13" hits="64" branch="False" />
+            <line number="15" hits="58" branch="False" />
+            <line number="16" hits="58" branch="False" />
+            <line number="17" hits="58" branch="False" />
+            <line number="18" hits="58" branch="False" />
+            <line number="19" hits="58" branch="False" />
+            <line number="20" hits="58" branch="False" />
           </lines>
         </class>
         <class name="Grupa4_Tim1_KnjigaRecepata.Models.Recept" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Models\Recept.cs" line-rate="1" branch-rate="1" complexity="9">
@@ -943,7 +943,7 @@
             </method>
             <method name="get_ocjene" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="62" branch="False" />
+                <line number="17" hits="64" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.Int32,System.String,Grupa4_Tim1_KnjigaRecepata.Models.VrstaJela,System.String,System.Int32,System.Collections.Generic.Dictionary`2&lt;Grupa4_Tim1_KnjigaRecepata.Models.Sastojak,System.Double&gt;,Grupa4_Tim1_KnjigaRecepata.Models.KompleksnostPripreme,System.Collections.Generic.List`1&lt;Grupa4_Tim1_KnjigaRecepata.Models.Ocjena&gt;)" line-rate="1" branch-rate="1" complexity="1">
@@ -972,7 +972,7 @@
             <line number="13" hits="68" branch="False" />
             <line number="14" hits="90" branch="False" />
             <line number="15" hits="68" branch="False" />
-            <line number="17" hits="62" branch="False" />
+            <line number="17" hits="64" branch="False" />
             <line number="19" hits="53" branch="False" />
             <line number="20" hits="53" branch="False" />
             <line number="21" hits="53" branch="False" />
@@ -1188,7 +1188,7 @@
         </class>
       </classes>
     </package>
-    <package name="KnjigaRecepataTest" line-rate="0.9737" branch-rate="0.875" complexity="57">
+    <package name="KnjigaRecepataTest" line-rate="0.9740000000000001" branch-rate="0.875" complexity="58">
       <classes>
         <class name="AutoGeneratedProgram" filename=".nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -1714,7 +1714,7 @@
             <line number="15" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="KnjigaRecepataTest.ReceptTest" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\KnjigaRecepataTest\ReceptTest.cs" line-rate="1" branch-rate="0.875" complexity="22">
+        <class name="KnjigaRecepataTest.ReceptTest" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\KnjigaRecepataTest\ReceptTest.cs" line-rate="1" branch-rate="0.875" complexity="23">
           <methods>
             <method name="SetUp" signature="(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1855,9 +1855,18 @@
                 <line number="128" hits="1" branch="False" />
               </lines>
             </method>
+            <method name="Ocijeni_IspravnaOcjena_OcjenaDodana" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="131" hits="1" branch="False" />
+                <line number="132" hits="1" branch="False" />
+                <line number="133" hits="1" branch="False" />
+                <line number="134" hits="1" branch="False" />
+                <line number="135" hits="1" branch="False" />
+              </lines>
+            </method>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="5" branch="False" />
+                <line number="26" hits="6" branch="False" />
               </lines>
             </method>
             <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -1987,7 +1996,12 @@
             <line number="126" hits="1" branch="False" />
             <line number="127" hits="1" branch="False" />
             <line number="128" hits="1" branch="False" />
-            <line number="26" hits="5" branch="False" />
+            <line number="131" hits="1" branch="False" />
+            <line number="132" hits="1" branch="False" />
+            <line number="133" hits="1" branch="False" />
+            <line number="134" hits="1" branch="False" />
+            <line number="135" hits="1" branch="False" />
+            <line number="26" hits="6" branch="False" />
             <line number="19" hits="1" branch="False" />
             <line number="20" hits="1" branch="False" />
             <line number="21" hits="1" branch="False" />

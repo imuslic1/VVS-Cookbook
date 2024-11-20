@@ -127,6 +127,13 @@ namespace KnjigaRecepataTest {
             Assert.AreEqual(0.5 * 236.59, r4.sastojci.ElementAt(2).Value);
         }
 
+        [TestMethod]
+        public void Ocijeni_IspravnaOcjena_OcjenaDodana() {
+            Ocjena ocjena = new Ocjena(1, 4, "...");
+            rs.ocijeni(r1, ocjena);
+            Assert.AreEqual(4, r1.ocjene[3].ocjena);
+        }
+
 
 
 
