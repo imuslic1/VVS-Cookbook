@@ -97,22 +97,13 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
             }
         }
 
-        public void ocijeni(Recept recept)
+        public void ocijeni(Recept recept, Ocjena ocjena)
         {
-            int ocjena = 0;
-
-            Console.WriteLine("Unesite ocjenu za odabrani recept (1-5): ");
-            string unos = Console.ReadLine();
-
-            if(!int.TryParse(unos, out ocjena) || ocjena < 1 || ocjena > 5)
+            if(ocjena.ocjena < 1 || ocjena.ocjena > 5)
             {
                 throw new Exception("Pogresan unos");
             }
-
-            Console.WriteLine("Unesite komentar: ");
-            string komentar = Console.ReadLine();
-
-            recept.ocjene.Add(new Ocjena(recept.ocjene.Count, ocjena, komentar));     
+            recept.ocjene.Add(ocjena);     
         }
         
     }
