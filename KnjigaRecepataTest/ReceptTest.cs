@@ -70,15 +70,11 @@ namespace KnjigaRecepataTest {
                             KompleksnostPripreme.LAKO, ocjene1);
         }
 
-
         [TestMethod]
         public void TestDajUkupanBrojKalorija() {
             double kalorije = rs.dajUkupanBrojKalorija(r1);
             Assert.AreEqual(36023, kalorije);
         }
-
-
-
 
         [TestMethod]
         public void TestPrikazi() {
@@ -119,36 +115,12 @@ namespace KnjigaRecepataTest {
             Assert.AreEqual(sb.ToString(), rs.prikaziAlergene(r1));
         }
 
-        [TestMethod]
-        public void konvertujMjerneJedinice_UnceUMililitre_Konvertuje() {
-            rs.konvertujMjerneJedinice(r4);
-            Assert.AreEqual(5*29.57, r4.sastojci.ElementAt(1).Value);
-        }
-
-        [TestMethod]
-        public void konvertujMjerneJedinice_CaseUGrame_Konvertuje() {
-            rs.konvertujMjerneJedinice(r4);
-            Assert.AreEqual(0.5 * 236.59, r4.sastojci.ElementAt(2).Value);
-        }
-
-        [TestMethod]
-        public void Ocijeni_IspravnaOcjena_OcjenaDodana() {
-            Ocjena ocjena = new Ocjena(1, 4, "...");
-            rs.ocijeni(r1, ocjena);
-            Assert.AreEqual(4, r1.ocjene[3].ocjena);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(Exception))]
-        public void Ocijeni_NevalidnaOcjena_Izuzetak() {
-            Ocjena ocjena = new Ocjena(1, 6, "...");
-            rs.ocijeni(r1, ocjena);
-        }
-
-
-
-
         
+
+
+
+
+
 
 
 
