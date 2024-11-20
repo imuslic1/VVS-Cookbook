@@ -134,7 +134,12 @@ namespace KnjigaRecepataTest {
             Assert.AreEqual(4, r1.ocjene[3].ocjena);
         }
 
-
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void Ocijeni_NevalidnaOcjena_Izuzetak() {
+            Ocjena ocjena = new Ocjena(1, 6, "...");
+            rs.ocijeni(r1, ocjena);
+        }
 
 
 
