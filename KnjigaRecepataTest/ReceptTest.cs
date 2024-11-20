@@ -121,6 +121,12 @@ namespace KnjigaRecepataTest {
             Assert.AreEqual(5 * 29.57, r4.sastojci.ElementAt(1).Value);
         }
 
+        [TestMethod]
+        public void konvertujMjerneJedinice_CaseUGrame_Konvertuje() {
+            rs.konvertujMjerneJedinice(r4);
+            Assert.AreEqual(0.5 * 236.59, r4.sastojci.ElementAt(2).Value);
+        }
+
 
 
 
