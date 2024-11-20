@@ -115,7 +115,13 @@ namespace KnjigaRecepataTest {
             Assert.AreEqual(sb.ToString(), rs.prikaziAlergene(r1));
         }
 
-        
+        [TestMethod]
+        public void konvertujMjerneJedinice_UnceUMililitre_Konvertuje() {
+            rs.konvertujMjerneJedinice(r4);
+            Assert.AreEqual(5 * 29.57, r4.sastojci.ElementAt(1).Value);
+        }
+
+
 
 
 
