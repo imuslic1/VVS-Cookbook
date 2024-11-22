@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.9661" branch-rate="0.9213" version="1.9" timestamp="1732105906" lines-covered="714" lines-valid="739" branches-covered="82" branches-valid="89">
+<coverage line-rate="0.9648" branch-rate="0.9213" version="1.9" timestamp="1732244755" lines-covered="713" lines-valid="739" branches-covered="82" branches-valid="89">
   <sources>
-    <source>C:\Users\ismar\</source>
+    <source>C:\Users\User\</source>
   </sources>
   <packages>
     <package name="Grupa4_Tim1_KnjigaRecepata" line-rate="0.9581000000000001" branch-rate="0.9315000000000001" complexity="119">
       <classes>
-        <class name="Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices.ShoppingListaService" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Services\ShoppingListaServices\ShoppingListaService.cs" line-rate="1" branch-rate="1" complexity="9">
+        <class name="Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices.ShoppingListaService" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\Services\ShoppingListaServices\ShoppingListaService.cs" line-rate="1" branch-rate="1" complexity="9">
           <methods>
             <method name="cijenaSastojaka" signature="(Grupa4_Tim1_KnjigaRecepata.Models.Recept)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
@@ -106,7 +106,7 @@
             <line number="22" hits="4" branch="False" />
           </lines>
         </class>
-        <class name="Grupa4_Tim1_KnjigaRecepata.Services.SastojakServices.SastojakService" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Services\SastojakServices\SastojakService.cs" line-rate="0.9736" branch-rate="0.8665999999999999" complexity="16">
+        <class name="Grupa4_Tim1_KnjigaRecepata.Services.SastojakServices.SastojakService" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\Services\SastojakServices\SastojakService.cs" line-rate="0.9736" branch-rate="0.8665999999999999" complexity="16">
           <methods>
             <method name="dajBrojKalorijaPoJedinici" signature="(Grupa4_Tim1_KnjigaRecepata.Models.Sastojak)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
@@ -238,7 +238,7 @@
             <line number="19" hits="5" branch="False" />
           </lines>
         </class>
-        <class name="Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices.ReceptService" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Services\ReceptServices\ReceptService.cs" line-rate="1" branch-rate="0.8928" complexity="29">
+        <class name="Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices.ReceptService" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\Services\ReceptServices\ReceptService.cs" line-rate="1" branch-rate="0.8928" complexity="29">
           <methods>
             <method name="dajUkupanBrojKalorija" signature="(Grupa4_Tim1_KnjigaRecepata.Models.Recept)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
@@ -514,7 +514,7 @@
             <line number="19" hits="9" branch="False" />
           </lines>
         </class>
-        <class name="Grupa4_Tim1_KnjigaRecepata.Services.OcjenaServices.OcjenaService" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Services\OcjenaServices\OcjenaService.cs" line-rate="1" branch-rate="1" complexity="11">
+        <class name="Grupa4_Tim1_KnjigaRecepata.Services.OcjenaServices.OcjenaService" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\Services\OcjenaServices\OcjenaService.cs" line-rate="1" branch-rate="1" complexity="11">
           <methods>
             <method name="dajProsjecnuOcjenu" signature="(System.Collections.Generic.List`1&lt;Grupa4_Tim1_KnjigaRecepata.Models.Ocjena&gt;)" line-rate="1" branch-rate="1" complexity="10">
               <lines>
@@ -604,7 +604,7 @@
             <line number="40" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices.KnjigaRecepataService" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Services\KnjigaRecepataServices\KnjigaRecepataService.cs" line-rate="1" branch-rate="1" complexity="16">
+        <class name="Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices.KnjigaRecepataService" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\Services\KnjigaRecepataServices\KnjigaRecepataService.cs" line-rate="1" branch-rate="1" complexity="16">
           <methods>
             <method name="dodajRecept" signature="(Grupa4_Tim1_KnjigaRecepata.Models.KnjigaRecepata,Grupa4_Tim1_KnjigaRecepata.Models.Recept)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
@@ -808,7 +808,7 @@
             <line number="25" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="Grupa4_Tim1_KnjigaRecepata.Models.KnjigaRecepata" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Models\KnjigaRecepata.cs" line-rate="1" branch-rate="1" complexity="5">
+        <class name="Grupa4_Tim1_KnjigaRecepata.Models.KnjigaRecepata" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\Models\KnjigaRecepata.cs" line-rate="1" branch-rate="1" complexity="5">
           <methods>
             <method name="get_id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -864,7 +864,7 @@
             <line number="26" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="Grupa4_Tim1_KnjigaRecepata.Models.Ocjena" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Models\Ocjena.cs" line-rate="1" branch-rate="1" complexity="4">
+        <class name="Grupa4_Tim1_KnjigaRecepata.Models.Ocjena" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\Models\Ocjena.cs" line-rate="1" branch-rate="1" complexity="4">
           <methods>
             <method name="get_id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -904,7 +904,7 @@
             <line number="20" hits="59" branch="False" />
           </lines>
         </class>
-        <class name="Grupa4_Tim1_KnjigaRecepata.Models.Recept" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Models\Recept.cs" line-rate="1" branch-rate="1" complexity="9">
+        <class name="Grupa4_Tim1_KnjigaRecepata.Models.Recept" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\Models\Recept.cs" line-rate="1" branch-rate="1" complexity="9">
           <methods>
             <method name="get_id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -988,7 +988,7 @@
             <line number="31" hits="53" branch="False" />
           </lines>
         </class>
-        <class name="Grupa4_Tim1_KnjigaRecepata.Models.Sastojak" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Models\Sastojak.cs" line-rate="1" branch-rate="1" complexity="11">
+        <class name="Grupa4_Tim1_KnjigaRecepata.Models.Sastojak" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\Models\Sastojak.cs" line-rate="1" branch-rate="1" complexity="11">
           <methods>
             <method name="get_id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1090,7 +1090,7 @@
             <line number="37" hits="42" branch="False" />
           </lines>
         </class>
-        <class name="Grupa4_Tim1_KnjigaRecepata.Models.ShoppingLista" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Models\ShoppingLista.cs" line-rate="1" branch-rate="1" complexity="2">
+        <class name="Grupa4_Tim1_KnjigaRecepata.Models.ShoppingLista" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\Models\ShoppingLista.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
             <method name="get_recept" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1114,7 +1114,7 @@
             <line number="16" hits="3" branch="False" />
           </lines>
         </class>
-        <class name="Grupa4_Tim1_KnjigaRecepata.Data.DbClass" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\Grupa4_Tim1_KnjigaRecepata\Data\DbClass.cs" line-rate="0.36840000000000006" branch-rate="1" complexity="7">
+        <class name="Grupa4_Tim1_KnjigaRecepata.Data.DbClass" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\Grupa4_Tim1_KnjigaRecepata\Data\DbClass.cs" line-rate="0.36840000000000006" branch-rate="1" complexity="7">
           <methods>
             <method name="get_sastojci" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1188,7 +1188,7 @@
         </class>
       </classes>
     </package>
-    <package name="KnjigaRecepataTest" line-rate="0.9719" branch-rate="0.875" complexity="59">
+    <package name="KnjigaRecepataTest" line-rate="0.9695999999999999" branch-rate="0.875" complexity="59">
       <classes>
         <class name="AutoGeneratedProgram" filename=".nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -1202,7 +1202,7 @@
             <line number="4" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="KnjigaRecepataTest.KnjigaRecepataTest" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\KnjigaRecepataTest\KnjigaRecepataTest.cs" line-rate="0.9772" branch-rate="1" complexity="12">
+        <class name="KnjigaRecepataTest.KnjigaRecepataTest" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\KnjigaRecepataTest\KnjigaRecepataTest.cs" line-rate="0.9772" branch-rate="1" complexity="12">
           <methods>
             <method name="DodajRecept_RazlicitiTipoviRecepta_Izuzetak" signature="()" line-rate="0.8" branch-rate="1" complexity="1">
               <lines>
@@ -1520,7 +1520,7 @@
             <line number="18" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="KnjigaRecepataTest.OcjenaTest" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\KnjigaRecepataTest\OcjenaTest.cs" line-rate="0.9625" branch-rate="1" complexity="7">
+        <class name="KnjigaRecepataTest.OcjenaTest" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\KnjigaRecepataTest\OcjenaTest.cs" line-rate="0.9625" branch-rate="1" complexity="7">
           <methods>
             <method name="get_GenerateListuOcjena" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1714,7 +1714,7 @@
             <line number="15" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="KnjigaRecepataTest.ReceptTest" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\KnjigaRecepataTest\ReceptTest.cs" line-rate="0.9898" branch-rate="0.875" complexity="24">
+        <class name="KnjigaRecepataTest.ReceptTest" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\KnjigaRecepataTest\ReceptTest.cs" line-rate="0.9898" branch-rate="0.875" complexity="24">
           <methods>
             <method name="SetUp" signature="(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -2022,7 +2022,7 @@
             <line number="25" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="KnjigaRecepataTest.SastojakTest" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\KnjigaRecepataTest\SastojakTest.cs" line-rate="0.9615" branch-rate="1" complexity="8">
+        <class name="KnjigaRecepataTest.SastojakTest" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\KnjigaRecepataTest\SastojakTest.cs" line-rate="0.9615" branch-rate="1" complexity="8">
           <methods>
             <method name="DajBrojKalorijaPoJedinici_SmisleniPodaci_BrojKalorija" signature="(System.Double,System.Double,System.Double,System.Double,System.Double)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -2164,7 +2164,7 @@
             <line number="11" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="KnjigaRecepataTest.ShoppingListaTest" filename="Desktop\chest\faks\III godina\5. semestar\VVS\Projekat1\repo\KnjigaRecepataTest\ShoppingListaTest.cs" line-rate="0.9687" branch-rate="1" complexity="7">
+        <class name="KnjigaRecepataTest.ShoppingListaTest" filename="Desktop\Fax\Verifikacija i validacija softvera\VVS-projekat1\KnjigaRecepataTest\ShoppingListaTest.cs" line-rate="0.9531000000000001" branch-rate="1" complexity="7">
           <methods>
             <method name="SetUp" signature="(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -2237,14 +2237,14 @@
                 <line number="93" hits="0" branch="False" />
               </lines>
             </method>
-            <method name="PrikaziShoppingListu" signature="()" line-rate="1" branch-rate="1" complexity="1">
+            <method name="PrikaziShoppingListu" signature="()" line-rate="0.8332999999999999" branch-rate="1" complexity="1">
               <lines>
                 <line number="97" hits="1" branch="False" />
                 <line number="98" hits="1" branch="False" />
                 <line number="99" hits="1" branch="False" />
                 <line number="100" hits="1" branch="False" />
                 <line number="102" hits="1" branch="False" />
-                <line number="103" hits="1" branch="False" />
+                <line number="103" hits="0" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -2320,7 +2320,7 @@
             <line number="99" hits="1" branch="False" />
             <line number="100" hits="1" branch="False" />
             <line number="102" hits="1" branch="False" />
-            <line number="103" hits="1" branch="False" />
+            <line number="103" hits="0" branch="False" />
             <line number="15" hits="4" branch="False" />
             <line number="13" hits="1" branch="False" />
             <line number="14" hits="1" branch="False" />

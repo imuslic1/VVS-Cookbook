@@ -2,6 +2,7 @@
 using Grupa4_Tim1_KnjigaRecepata.Models;
 using Grupa4_Tim1_KnjigaRecepata.Data;
 using Grupa4_Tim1_KnjigaRecepata.Services.SastojakServices;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace KnjigaRecepataTest
 {
@@ -20,7 +21,24 @@ namespace KnjigaRecepataTest
 			Assert.AreEqual(expected, sastojakService.dajBrojKalorijaPoJedinici(sastojak));
         }
 
-		[TestMethod]
+        public TestContext TestContext { get; set; }
+
+        [TestMethod]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "SastojakTestPodaci.csv", "SastojakTestPodaci#csv", DataAccessMethod.Sequential)]
+        public void DajBrojKalorijaPoJedinici_ValidniPodaci_DobijeniBrojKalorija()
+        {
+            // Access TestContext.DataRow
+            double ugljikohidrati = Convert.ToDouble(TestContext.DataRow["Ugljikohidrati"]);
+            double masti = Convert.ToDouble(TestContext.DataRow["Masti"]);
+            double proteini = Convert.ToDouble(TestContext.DataRow["Proteini"]);
+            double vlakna = Convert.ToDouble(TestContext.DataRow["Vlakna"]);
+            double expected = Convert.ToDouble(TestContext.DataRow["OcekivaniBrojKalorija"]);
+
+            Sastojak sastojak = new(0, "Testni sastojak", ugljikohidrati, masti, proteini, vlakna, 0, null, 0, MjernaJedinica.GRAM);
+            Assert.AreEqual(expected, sastojakService.dajBrojKalorijaPoJedinici(sastojak));
+        }
+
+        [TestMethod]
 		[ExpectedException(typeof(ArgumentNullException))]
 		public void DajBrojKalorijaPoJedinici_Null_Izuzetak()
 		{

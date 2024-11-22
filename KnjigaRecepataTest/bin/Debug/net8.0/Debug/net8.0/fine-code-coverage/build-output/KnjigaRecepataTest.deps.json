@@ -350,10 +350,7 @@
       "System.Reflection.Metadata/1.6.0": {},
       "Grupa4_Tim1_KnjigaRecepata/1.0.0": {
         "runtime": {
-          "Grupa4_Tim1_KnjigaRecepata.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Grupa4_Tim1_KnjigaRecepata.dll": {}
         }
       },
       "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
