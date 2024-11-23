@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
     public class ReceptService : IReceptService {
         private readonly DbClass _db;
-        private readonly SastojakService _sastojakService;
+        private readonly ISastojakService _sastojakService;
 
-        public ReceptService(DbClass db, SastojakService sastojakService) {
+        public ReceptService(DbClass db, ISastojakService sastojakService) {
             _db = db;
             _sastojakService = sastojakService;
         }
