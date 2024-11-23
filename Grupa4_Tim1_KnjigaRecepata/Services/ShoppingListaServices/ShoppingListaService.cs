@@ -62,17 +62,7 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices
                 throw new ArgumentException("Nedozvoljeni karakteri u listi sastojaka");
             }
 
-            string[] postojeciSastojci = postojeci.Split(", ");
-            sb.AppendLine("Nedostajuci sastojci za recept " + recept.name + ":");
-            foreach (var sastojak in recept.sastojci) {
-                Sastojak s = sastojak.Key;
-                // Mozda s.naziv.ToLower(), nisam siguran treba li ili ne
-                if (!postojeciSastojci.Contains(s.naziv)) {
-                    sb.AppendLine("- " + s.naziv);
-                }
-            }
-            Console.WriteLine(sb.ToString());
-            //Modularnost i fleksibilnost testiranja
+            
             return sb.ToString();
         }
     }

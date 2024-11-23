@@ -44,5 +44,7 @@ namespace KnjigaRecepataTest {
             string unos = "1cd2fnestoRandom!";
             sl.prikaziNedostajuceSastojke(r1, unos);
         }
+
+        
     }
 }
