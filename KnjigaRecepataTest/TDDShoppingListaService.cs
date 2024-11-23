@@ -50,7 +50,14 @@ namespace KnjigaRecepataTest {
             string unos = "Brašno";
             string rezultat = sl.prikaziNedostajuceSastojke(r1, unos);
             string expected = "Nedostajuci sastojci za recept " + r1.name + ":" + "\r\n- Šećer";
-            Assert.AreEqual(expected.Trim(), rezultat.Trim());
+            Assert.AreEqual(expected, rezultat);
+        }
+        [TestMethod]
+        public void prikaziNedostajuceSastojke_ValidanUnos2() {
+            string unos = "Brašno, Šećer";
+            string rezultat = sl.prikaziNedostajuceSastojke(r1, unos);
+            string expected = "Nedostajuci sastojci za recept " + r1.name + ":" + "\r\n";
+            Assert.AreEqual(expected, rezultat);
         }
     }
 }
