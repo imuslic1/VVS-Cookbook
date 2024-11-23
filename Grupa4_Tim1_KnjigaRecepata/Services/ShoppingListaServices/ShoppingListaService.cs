@@ -54,5 +54,26 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices
 
             return sb.ToString();
         }
+
+        public string prikaziNedostajuceSastojke(Recept recept, string postojeci) {
+            StringBuilder sb = new StringBuilder();
+
+            if (postojeci.Any(c => !char.IsAsciiLetter(c) && c != ',' && c != ' ')) {
+                throw new ArgumentException("Nedozvoljeni karakteri u listi sastojaka");
+            }
+
+            string[] postojeciSastojci = postojeci.Split(", ");
+            sb.AppendLine("Nedostajuci sastojci za recept " + recept.name + ":");
+            foreach (var sastojak in recept.sastojci) {
+                Sastojak s = sastojak.Key;
+                // Mozda s.naziv.ToLower(), nisam siguran treba li ili ne
+                if (!postojeciSastojci.Contains(s.naziv)) {
+                    sb.AppendLine("- " + s.naziv);
+                }
+            }
+            Console.WriteLine(sb.ToString());
+            //Modularnost i fleksibilnost testiranja
+            return sb.ToString();
+        }
     }
 }

@@ -328,7 +328,6 @@ namespace Grupa4_Tim1_KnjigaRecepata
                             noviSastojci.Add(sastojci[indeksSastojka], kolicina);
                             Console.WriteLine($"Unesite indekse (od 1 do {sastojci.Count}) koje sastojke vaš recept uključuje, te unesite količinu potrebnu za Vaš recept (kada ste završili, unesite 0): ");
                             indeksSastojka = Convert.ToInt32(Console.ReadLine());
-
                         }
                         Console.WriteLine("Unesite kompleksnost pripreme (lako, srednje, tesko, profesionalac): ");
                         string kompleksnostPripreme = Console.ReadLine();
