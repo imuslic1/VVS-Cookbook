@@ -277,6 +277,14 @@ namespace Grupa4_Tim1_KnjigaRecepata
                         try
                         {
                             Console.WriteLine(sl.prikaziShoppingListu(shoppingLista));
+                            Console.WriteLine("Ukoliko vec imate neke od ovih sastojaka, unesite 1 (ukoliko imate sve, unesite 0)");
+                            if (Convert.ToInt32(Console.ReadLine()) == 0) break;
+                            
+
+                            Console.WriteLine("Unesite sastojke koje već posjedujete (odvojite ih zarezom i razmakom: ", "): ");
+                            string postojeciSastojci = Convert.ToString(Console.ReadLine());
+                            Console.WriteLine(sl.prikaziNedostajuceSastojke(trazeniRecept1, postojeciSastojci));
+
                         }
                         catch (Exception ex) { Console.WriteLine(ex.Message); }
                         
