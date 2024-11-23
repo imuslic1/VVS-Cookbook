@@ -1,12 +1,12 @@
-﻿using System;
-using Grupa4_Tim1_KnjigaRecepata.Models;
+﻿using Grupa4_Tim1_KnjigaRecepata.Models;
 using Grupa4_Tim1_KnjigaRecepata.Data;
 using Grupa4_Tim1_KnjigaRecepata.Services.SastojakServices;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Globalization;
+using CsvHelper;
 
 namespace KnjigaRecepataTest
 {
-	[TestClass]
+    [TestClass]
 	public class SastojakTest
 	{
 		private static SastojakService sastojakService = new SastojakService(new DbClass());
@@ -21,21 +21,35 @@ namespace KnjigaRecepataTest
 			Assert.AreEqual(expected, sastojakService.dajBrojKalorijaPoJedinici(sastojak));
         }
 
-        public TestContext TestContext { get; set; }
+        static IEnumerable<object[]> SastojakTestPodaciCSV
+        {
+            get
+            {
+                return LoadDataCSV();
+            }
+        }
+
+        public static IEnumerable<object[]> LoadDataCSV()
+        {
+            using (var reader = new StreamReader("SastojakTestPodaci.csv"))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                var rows = csv.GetRecords<dynamic>();
+                foreach(var row in rows)
+                {
+                    var values = ((IDictionary<String, Object>)row).Values;
+                    var elements = values.Select(x => x.ToString()).ToList();
+                    yield return new object[] { elements[0], elements[1], elements[2], elements[3], elements[4] };
+                }
+            }
+        }
 
         [TestMethod]
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "SastojakTestPodaci.csv", "SastojakTestPodaci#csv", DataAccessMethod.Sequential)]
-        public void DajBrojKalorijaPoJedinici_ValidniPodaci_DobijeniBrojKalorija()
+        [DynamicData("SastojakTestPodaciCSV")]
+        public void DajBrojKalorijaPoJedinici_ValidniPodaci_DobijeniBrojKalorija(string ugljikohidrati, string masti, string proteini, string vlakna, string expected)
         {
-            // Access TestContext.DataRow
-            double ugljikohidrati = Convert.ToDouble(TestContext.DataRow["Ugljikohidrati"]);
-            double masti = Convert.ToDouble(TestContext.DataRow["Masti"]);
-            double proteini = Convert.ToDouble(TestContext.DataRow["Proteini"]);
-            double vlakna = Convert.ToDouble(TestContext.DataRow["Vlakna"]);
-            double expected = Convert.ToDouble(TestContext.DataRow["OcekivaniBrojKalorija"]);
-
-            Sastojak sastojak = new(0, "Testni sastojak", ugljikohidrati, masti, proteini, vlakna, 0, null, 0, MjernaJedinica.GRAM);
-            Assert.AreEqual(expected, sastojakService.dajBrojKalorijaPoJedinici(sastojak));
+            Sastojak sastojak = new(0, "Testni sastojak", double.Parse(ugljikohidrati, CultureInfo.InvariantCulture), double.Parse(masti, CultureInfo.InvariantCulture), double.Parse(proteini, CultureInfo.InvariantCulture), double.Parse(vlakna, CultureInfo.InvariantCulture), 0, null, 0, MjernaJedinica.GRAM);
+            Assert.AreEqual(double.Parse(expected, CultureInfo.InvariantCulture), sastojakService.dajBrojKalorijaPoJedinici(sastojak));
         }
 
         [TestMethod]
