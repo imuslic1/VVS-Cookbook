@@ -10,6 +10,7 @@ using Grupa4_Tim1_KnjigaRecepata.Services.SastojakServices;
 using Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices;
 
 namespace KnjigaRecepataTest {
+    [TestClass]
     public class TDDShoppingListaService {
         // Kako da pisem test za metodu koja ne postoji :D
         static DbClass baza = new DbClass();
@@ -38,10 +39,10 @@ namespace KnjigaRecepataTest {
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
         public void prikaziNedostajuceSastojke_NevalidanUnos_Exception() {
-            ShoppingLista lista = new ShoppingLista();
-            lista.recept = null;
-            Assert.ThrowsException<ArgumentException>(() => shoppingListaService.prikaziShoppingListu(lista));
+            string unos = "1cd2fnestoRandom!";
+            sl.prikaziNedostajuceSastojke(r1, unos);
         }
     }
 }
