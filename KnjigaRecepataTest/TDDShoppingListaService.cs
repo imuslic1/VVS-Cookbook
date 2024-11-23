@@ -45,6 +45,11 @@ namespace KnjigaRecepataTest {
             sl.prikaziNedostajuceSastojke(r1, unos);
         }
 
-        
+        [TestMethod]
+        public void prikaziNedostajuceSastojke_ValidanUnos() {
+            string unos = "brašno";
+            string rezultat = sl.prikaziNedostajuceSastojke(r1, unos);
+            Assert.AreEqual("Nedostaje: Šećer", rezultat);
+        }
     }
 }
