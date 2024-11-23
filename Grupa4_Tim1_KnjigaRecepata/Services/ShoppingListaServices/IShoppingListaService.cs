@@ -11,5 +11,6 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices
     {
         string prikaziShoppingListu(ShoppingLista list);
         double cijenaSastojaka(Recept recept);
+        string prikaziNedostajuceSastojke(Recept recept, string postojeci);
     }
 }
