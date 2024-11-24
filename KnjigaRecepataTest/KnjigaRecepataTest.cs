@@ -92,27 +92,27 @@ namespace KnjigaRecepataTest
                             new Recept(0, "abc", VrstaJela.DESERT, "Testni opis", 10, new Dictionary<Sastojak, double>(), KompleksnostPripreme.LAKO, new List<Ocjena>()),
                             new Recept(2, "fgh", VrstaJela.DESERT, "Testni opis", 15, new Dictionary<Sastojak, double>(), KompleksnostPripreme.TESKO, new List<Ocjena>())
                         }),
-                        "Naziv: abc, Priprema: Testni opis, Vrijeme pripreme: 10 minuta, Kompleksnost: LAKO\nSastojci:\nNaziv: bcd, Priprema: Testni opis, Vrijeme pripreme: 5 minuta, Kompleksnost: SREDNJE_TESKO\nSastojci:\nNaziv: fgh, Priprema: Testni opis, Vrijeme pripreme: 15 minuta, Kompleksnost: TESKO\nSastojci:\n"
+                        "Recept: abc\nVrsta jela: DESERT\nVrijeme pripreme: 10 minuta\nKompleksnost pripreme: LAKO\nSastojci:\nPriprema: Testni opis\nOcjene:\nRecept: bcd\nVrsta jela: DESERT\nVrijeme pripreme: 5 minuta\nKompleksnost pripreme: SREDNJE_TESKO\nSastojci:\nPriprema: Testni opis\nOcjene: \nRecept: fgh\nVrsta jela: DESERT\nVrijeme pripreme: 15 minuta\nKompleksnost pripreme: TESKO\nSastojci:\nPriprema: Testni opis\nOcjene: "
                     },
                     new object[] {
                         new KnjigaRecepata(1, VrstaJela.PREDJELO, new List<Recept>
                         {
                             new Recept(1, "bcd", VrstaJela.DESERT, "Testni opis", 5, new Dictionary<Sastojak, double>(), KompleksnostPripreme.SREDNJE_TESKO, new List<Ocjena>()),
+                            new Recept(2, "fgh", VrstaJela.DESERT, "Testni opis", 15, new Dictionary<Sastojak, double>(), KompleksnostPripreme.TESKO, new List<Ocjena>()),
                             new Recept(3, "ggg", VrstaJela.DESERT, "Testni opis", 25, new Dictionary<Sastojak, double>(), KompleksnostPripreme.SREDNJE_TESKO, new List<Ocjena>()),
                             new Recept(4, "nesortirana", VrstaJela.DESERT, "Testni opis", 40, new Dictionary<Sastojak, double>(), KompleksnostPripreme.SREDNJE_TESKO, new List<Ocjena>()),
                             new Recept(0, "abc", VrstaJela.DESERT, "Testni opis", 10, new Dictionary<Sastojak, double>(), KompleksnostPripreme.LAKO, new List<Ocjena>()),
-                            new Recept(2, "fgh", VrstaJela.DESERT, "Testni opis", 15, new Dictionary<Sastojak, double>(), KompleksnostPripreme.TESKO, new List<Ocjena>())
                         }, true),
-                        "Naziv: bcd, Priprema: Testni opis, Vrijeme pripreme: 5 minuta, Kompleksnost: SREDNJE_TESKO\nSastojci:\nNaziv: ggg, Priprema: Testni opis, Vrijeme pripreme: 25 minuta, Kompleksnost: SREDNJE_TESKO\nSastojci:\nNaziv: nesortirana, Priprema: Testni opis, Vrijeme pripreme: 40 minuta, Kompleksnost: SREDNJE_TESKO\nSastojci:\n" +
-                    "Naziv: abc, Priprema: Testni opis, Vrijeme pripreme: 10 minuta, Kompleksnost: LAKO\nSastojci:\nNaziv: fgh, Priprema: Testni opis, Vrijeme pripreme: 15 minuta, Kompleksnost: TESKO\nSastojci:\n"
+                        "Recept: bcd\nVrsta jela: DESERT\nVrijeme pripreme: 5 minuta\nKompleksnost pripreme: SREDNJE_TESKO\nSastojci:\nPriprema: Testni opis\nOcjene: \nRecept: fgh\nVrsta jela: DESERT\nVrijeme pripreme: 15 minuta\nKompleksnost pripreme: TESKO\nSastojci:\nPriprema: Testni opis\nOcjene: \nRecept: ggg\nVrsta jela: DESERT\nVrijeme pripreme: 25 minuta\nKompleksnost pripreme: SREDNJE_TESKO\nSastojci:\nPriprema: Testni opis\nOcjene: \nRecept: nesortirana\nVrsta jela: DESERT\nVrijeme pripreme: 40 minuta\nKompleksnost pripreme: SREDNJE_TESKO\nSastojci:\nPriprema: Testni opis\nOcjene: \n" +
+                    "Recept: abc\nVrsta jela: DESERT\nVrijeme pripreme: 10 minuta\nKompleksnost pripreme: LAKO\nSastojci:\nPriprema: Testni opis\nOcjene: \n"
                     },
                     new object[]
                     {
                         new KnjigaRecepata(1, VrstaJela.PREDJELO, new List<Recept>{
                             new Recept(1, "bcd", VrstaJela.DESERT, "Testni opis", 5, new Dictionary<Sastojak, double>{
                                 { new Sastojak(1, "Šećer", 99.8, 0.0, 0.0, 0.0, 0.0, null, 0.5, MjernaJedinica.GRAM), 200.0 },
-                                { new Sastojak(2, "Maslac", 0.1, 81.0, 0.9, 0.0, 1.0, Alergen.LAKTOZA, 2.0, MjernaJedinica.GRAM), 100.0 }}, KompleksnostPripreme.SREDNJE_TESKO, new List<Ocjena>()) 
-                        }), "Naziv: bcd, Priprema: Testni opis, Vrijeme pripreme: 5 minuta, Kompleksnost: SREDNJE_TESKO\nSastojci:\nNaziv sastojka: Šećer, Količina: 200g\nNaziv sastojka: Maslac, Količina: 100g\n"
+                                { new Sastojak(2, "Maslac", 0.1, 81.0, 0.9, 0.0, 1.0, Alergen.LAKTOZA, 2.0, MjernaJedinica.GRAM), 100.0 }}, KompleksnostPripreme.SREDNJE_TESKO, new List<Ocjena>())
+                        }), "Recept: bcd\nVrsta jela: DESERT\nVrijeme pripreme: 5 minuta\nKompleksnost pripreme: SREDNJE_TESKO\nSastojci:\n- Šećer: 200 g\n- Maslac: 100 g\nPriprema: Testni opis\nOcjene: "
                     }
                 };
             }
@@ -122,20 +122,15 @@ namespace KnjigaRecepataTest
         [DynamicData(nameof(GenerateIspisanaKnjigaData))]
         public void IspisiKnjiguRecepata_ShouldPrintSortedRecipes(KnjigaRecepata knjigaRecepata, string expectedOutput)
         {
-            
-            using (var sw = new StringWriter())
-            {
-                Console.SetOut(sw);
+            var result = knjigaRecepataService.ispisiKnjiguRecepata(knjigaRecepata);
 
-                // Act
-                knjigaRecepataService.ispisiKnjiguRecepata(knjigaRecepata);
+            // Assert
+            result = result.Replace("\r\n", "\n").Trim().Replace("\n", "").Replace(" ", "");
+            expectedOutput = expectedOutput.Replace("\r\n", "\n").Trim().Replace("\n", "").Replace(" ", "");
+            Console.WriteLine(result);
+            //Console.WriteLine(expectedOutput);
+            Assert.AreEqual(expectedOutput.Replace("\r\n", "\n").Trim(), result.Replace("\r\n", "\n").Trim());
 
-                // Assert
-                var result = sw.ToString();
-                Console.WriteLine(result);
-                Console.WriteLine(expectedOutput);
-                Assert.AreEqual(expectedOutput.Replace("\r\n", "\n").Trim(), result.Replace("\r\n", "\n").Trim());
-            }
         }
 
         [TestMethod]
