@@ -30,5 +30,37 @@ namespace Grupa4_Tim1_KnjigaRecepata.Models {
             this.ocjene = ocjene;
         }
 
+        public override bool Equals(object? obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            var other = (Recept)obj;
+
+            return id == other.id &&
+                   name == other.name &&
+                   tipRecepta.Equals(other.tipRecepta) &&
+                   priprema == other.priprema &&
+                   vrijemePripreme == other.vrijemePripreme &&
+                   sastojci.SequenceEqual(other.sastojci) &&
+                   kompleksnost.Equals(other.kompleksnost) &&
+                   ocjene.SequenceEqual(other.ocjene);
+        }
+
+        public override int GetHashCode()
+        {
+            int hash = 17;
+            hash = hash * 23 + id.GetHashCode();
+            hash = hash * 23 + (name?.GetHashCode() ?? 0);
+            hash = hash * 23 + (tipRecepta.GetHashCode());
+            hash = hash * 23 + (priprema?.GetHashCode() ?? 0);
+            hash = hash * 23 + vrijemePripreme.GetHashCode();
+            hash = hash * 23 + (sastojci?.GetHashCode() ?? 0);
+            hash = hash * 23 + (kompleksnost.GetHashCode());
+            hash = hash * 23 + (ocjene?.GetHashCode() ?? 0);
+            return hash;
+        }
     }
 }
