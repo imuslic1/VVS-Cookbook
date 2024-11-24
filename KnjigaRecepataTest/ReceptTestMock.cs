@@ -34,7 +34,7 @@ namespace KnjigaRecepataTest
         }
 
         [TestMethod]
-        public void DajUkupanBrojKalorija_CorrectData_ShouldReturnCorrectTotalCalories()
+        public void DajUkupanBrojKalorija_IspravniPodaci_IspravanUkupanBrojKalorija()
         {
             var sastojakService = new FakeSastojakService();
             DbClass baza = new DbClass();
