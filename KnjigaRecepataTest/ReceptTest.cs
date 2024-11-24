@@ -51,20 +51,19 @@ namespace KnjigaRecepataTest {
                 new Sastojak(10, "Rajčica", 3.9, 0.2, 0.9, 1.2, 0.02, null, 0.3, MjernaJedinica.GRAM)
             };
 
-            r1 = new Recept(2, "Pohovana piletina", VrstaJela.GLAVNO_JELO,
+            r1 = new Recept(1, "Pohovana piletina", VrstaJela.GLAVNO_JELO,
                             "Pohujte piletinu s brašnom i jajima, pržite do zlatne boje.", 30,
                             new Dictionary<Sastojak, double> { { sastojci[0], 100 }, { sastojci[4], 1 }, },
                             KompleksnostPripreme.SREDNJE_TESKO, ocjene1);
-            r2 = new Recept(4, "Rižoto sa safranom", VrstaJela.GLAVNO_JELO,
+            r2 = new Recept(2, "Rižoto sa safranom", VrstaJela.GLAVNO_JELO,
                             "Pirjajte rižu, dodajte šafran i vodu, kuhajte do mekane teksture.", 40,
                             new Dictionary<Sastojak, double> { { sastojci[0], 200 }, { sastojci[6], 1 }, { sastojci[7], 20 } },
                             KompleksnostPripreme.SREDNJE_TESKO, ocjene2);
-            r3 = new Recept(12, "Supa od rajcice", VrstaJela.PREDJELO,
+            r3 = new Recept(3, "Supa od rajcice", VrstaJela.PREDJELO,
                             "Pirjajte rajčice, dodajte vodu i začine.", 20,
-                            new Dictionary<Sastojak, double> { { sastojci[3], 200 }, { sastojci[6], 1 } },
+                            new Dictionary<Sastojak, double> { { sastojci[0], 30 }, { sastojci[3], 200 }, { sastojci[6], 1 } },
                             KompleksnostPripreme.LAKO, ocjene2);
-
-            r4 = new Recept(7, "Omlet sa sirom", VrstaJela.PREDJELO,
+            r4 = new Recept(4, "Omlet sa sirom", VrstaJela.PREDJELO,
                             "Izmiksajte jaja i sir, pecite u tavi.", 10,
                             new Dictionary<Sastojak, double> { { sastojci[3], 2 }, { sastojci[4], 5 }, { sastojci[0], 0.5 }, { sastojci[6], 0.5 } },
                             KompleksnostPripreme.LAKO, ocjene1);
@@ -123,8 +122,8 @@ namespace KnjigaRecepataTest {
 
         [TestMethod]
         public void konvertujMjerneJedinice_CaseUGrame_Konvertuje() {
-            rs.konvertujMjerneJedinice(r4);
-            Assert.AreEqual(0.5 * 236.59, r4.sastojci.ElementAt(2).Value);
+            rs.konvertujMjerneJedinice(r3);
+            Assert.AreEqual(30 * 236.59, r3.sastojci.ElementAt(0).Value);
         }
 
         [TestMethod]

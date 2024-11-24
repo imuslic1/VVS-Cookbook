@@ -79,21 +79,18 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices {
         }
 
         public void konvertujMjerneJedinice(Recept recept) { 
-
-            foreach (var sastojakEntry in recept.sastojci) {
-                Sastojak sastojak = sastojakEntry.Key;
-                double kolicina = sastojakEntry.Value;
-          
+            List<Sastojak> sastojci = recept.sastojci.Keys.ToList();
+            foreach (var sastojak in sastojci) {
                 if (sastojak.mjernaJedinica == MjernaJedinica.CASA) {
-                    sastojak.mjernaJedinica = MjernaJedinica.GRAM;
-                    kolicina *= 236.59;
+                    double kolicina = recept.sastojci[sastojak];
+                    recept.sastojci.Remove(sastojak);
+                    recept.sastojci.Add(sastojak, kolicina * 236.59);
                 }
                 else if (sastojak.mjernaJedinica == MjernaJedinica.UNCA) {
-                    sastojak.mjernaJedinica = MjernaJedinica.MILILITAR;
-                    kolicina *= 29.57;
+                    double kolicina = recept.sastojci[sastojak];
+                    recept.sastojci.Remove(sastojak);
+                    recept.sastojci.Add(sastojak, kolicina * 29.57);
                 }
-
-                recept.sastojci[sastojak] = kolicina;
             }
         }
 
