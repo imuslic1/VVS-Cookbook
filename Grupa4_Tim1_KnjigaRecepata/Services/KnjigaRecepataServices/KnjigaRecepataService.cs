@@ -91,5 +91,35 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices
             }
             return pronađeniRecepti;
         }
+        public List<Recept> receptiBezAlergena(KnjigaRecepata knjigaRecepata, List<Alergen> alergeni)
+        {
+            if (alergeni.Count == 0)
+            {
+                throw new ArgumentException("Potrebno je proslijediti alergen!");
+            }
+            var receptiBezAlergena = new List<Recept>();
+            foreach (var recept in knjigaRecepata.recepti)
+            {
+                var sastojci = recept.sastojci;
+                bool sadrziAlergen = false;
+                foreach (var sastojak in sastojci)
+                {
+                    if (sastojak.Key.alergen != null)
+                    {
+                        if (alergeni.Contains((Alergen)sastojak.Key.alergen))
+                        {
+                            sadrziAlergen = true;
+                            break;
+                        }
+                    }
+                }
+                if (!sadrziAlergen)
+                {
+                    receptiBezAlergena.Add(recept);
+                }
+            }
+            return receptiBezAlergena;
+
+        }
     }
 }
