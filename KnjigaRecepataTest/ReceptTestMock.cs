@@ -24,7 +24,12 @@ namespace KnjigaRecepataTest
 
             public string dajSkracenicu(MjernaJedinica jedinica)
             {
-                throw new NotImplementedException();
+                return jedinica switch {
+                    MjernaJedinica.SUPENA_KASIKA => "tbsp",
+                    MjernaJedinica.CASA => "cup",
+                    MjernaJedinica.MILILITAR => "ml",
+                    _ => ""
+                };
             }
 
             public void prikaziSastojak(Sastojak sastojak)
@@ -59,6 +64,55 @@ namespace KnjigaRecepataTest
                            (99.8 * 4 + 0 * 9 + 0 * 4 + 0 * 2) * 1;
 
             Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void PrikaziRecept_IspravniPodaci_IspravanPrikaz() {
+            var sastojakService = new FakeSastojakService();
+            DbClass baza = new DbClass();
+
+            var sastojak1 = new Sastojak(1, "Vrhnje za slag", 6.6, 88, 5.8, 0, 0.066, Alergen.LAKTOZA, 1.5, MjernaJedinica.CASA);
+            var sastojak2 = new Sastojak(2, "Tamna cokolada", 0.23, 0.405, 0.08, 0.055, 0, Alergen.ORASASTI_PLODOVI, 0.02, MjernaJedinica.GRAM);
+            var sastojak3 = new Sastojak(3, "Med", 17, 0, 0.1, 0, 0, Alergen.MED, 0.63, MjernaJedinica.SUPENA_KASIKA);
+
+            Ocjena ocjena1 = new Ocjena(1, 3, "...");
+            Ocjena ocjena2 = new Ocjena(2, 5, "...");
+            var ocjene1 = new List<Ocjena> { ocjena1, ocjena2 };
+
+            var recept = new Recept
+                (
+                    1,
+                    "Cokoladni mousse",
+                    VrstaJela.DESERT,
+                    "Otopite cokoladu, dodajte vrhnje i med, izmiksajte i ostavite u frizideru.",
+                    20,
+                    new Dictionary<Sastojak, double>
+                    {
+                        { sastojak1, 1 },
+                        { sastojak2, 50 },
+                        { sastojak3, 10 }
+                    },
+                    KompleksnostPripreme.LAKO,
+                    ocjene1
+                );
+
+            var receptService = new ReceptService(baza, sastojakService);
+            var rezultat = receptService.prikazi(recept);
+
+            // Pri korektnom ispisu, treba da sadrži:
+            Assert.IsTrue(rezultat.Contains("Cokoladni mousse"));
+            Assert.IsTrue(rezultat.Contains("Vrhnje za slag"));
+            Assert.IsTrue(rezultat.Contains("Tamna cokolada"));
+            Assert.IsTrue(rezultat.Contains("Med"));
+            Assert.IsTrue(rezultat.Contains("cup"));
+            Assert.IsTrue(rezultat.Contains("g"));
+            Assert.IsTrue(rezultat.Contains("tbsp"));
+
+
+            // Nije korištena ova mjerna jedinica
+            Assert.IsTrue(!rezultat.Contains("ml"));
+
+
         }
     }
 }
