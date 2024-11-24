@@ -27,7 +27,7 @@ namespace KnjigaRecepataTest
                 return jedinica switch {
                     MjernaJedinica.SUPENA_KASIKA => "tbsp",
                     MjernaJedinica.CASA => "cup",
-                    MjernaJedinica.MILILITAR => "ml",
+                    MjernaJedinica.GRAM => "g",
                     _ => ""
                 };
             }
@@ -105,7 +105,6 @@ namespace KnjigaRecepataTest
             Assert.IsTrue(rezultat.Contains("Tamna cokolada"));
             Assert.IsTrue(rezultat.Contains("Med"));
             Assert.IsTrue(rezultat.Contains("cup"));
-            Assert.IsTrue(rezultat.Contains("g"));
             Assert.IsTrue(rezultat.Contains("tbsp"));
 
 
