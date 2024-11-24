@@ -13,7 +13,7 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices
         void sortirajPremaVremenuPripreme(KnjigaRecepata knjigaRecepata);
         void sortirajPremaKompleksnosti(KnjigaRecepata knjigaRecepata);
         void sortirajPremaNazivu(KnjigaRecepata knjigaRecepata);
-        void ispisiKnjiguRecepata(KnjigaRecepata knjigaRecepata);
+        string ispisiKnjiguRecepata(KnjigaRecepata knjigaRecepata);
         Recept pretraziKnjiguRecepata(KnjigaRecepata knjigaRecepata, String naziv);
         List<Recept> pretraziKnjiguRecepata(KnjigaRecepata knjigaRecepata, double ocjena);
         List<Recept> receptiBezAlergena(KnjigaRecepata knjigaRecepata, List<Alergen> alergeni);

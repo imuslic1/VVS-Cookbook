@@ -14,10 +14,10 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices
     public class KnjigaRecepataService : IKnjigaRecepataService
     {
         private readonly IDbClass _db;
-        private readonly ReceptService _receptService;
-        private readonly OcjenaService _ocjenaService;
+        private readonly IReceptService _receptService;
+        private readonly IOcjenaService _ocjenaService;
 
-        public KnjigaRecepataService(IDbClass db, ReceptService receptService, OcjenaService ocjenaService)
+        public KnjigaRecepataService(IDbClass db, IReceptService receptService, IOcjenaService ocjenaService)
         {
             _db = db;
             _receptService = receptService;
@@ -53,23 +53,26 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices
         // efektivno druge dvije metode sortiranja apsolutno ničemu ne koriste tako da sam dodao atribut "sortiran" koji
         // označava da li je knjiga recepata već sortirana po nekom redoslijedu, ukoliko nije bazni sort će biti po nazivu
         // u suprotnom će sadržati već određeni sort.
-        public void ispisiKnjiguRecepata(KnjigaRecepata knjigaRecepata)
+        public string ispisiKnjiguRecepata(KnjigaRecepata knjigaRecepata)
         {
             if (!knjigaRecepata.sortirana)
             {
                 sortirajPremaNazivu(knjigaRecepata);
             }
             var sortiraniRecepti = knjigaRecepata.recepti;
+            StringBuilder sb = new StringBuilder();
             foreach (var recept in sortiraniRecepti)
             {
-                Console.WriteLine($"Naziv: {recept.name}, Priprema: {recept.priprema}, Vrijeme pripreme: {recept.vrijemePripreme} minuta, Kompleksnost: {recept.kompleksnost}");
+                sb.AppendLine(_receptService.prikazi(recept));
+                /*Console.WriteLine($"Naziv: {recept.name}, Priprema: {recept.priprema}, Vrijeme pripreme: {recept.vrijemePripreme} minuta, Kompleksnost: {recept.kompleksnost}");
                 Console.WriteLine("Sastojci:");
                 var sastojci = recept.sastojci;
                 foreach (var sastojak in sastojci)
                 {
                     Console.WriteLine($"Naziv sastojka: {sastojak.Key.naziv}, Količina: {sastojak.Value}g");
-                }
+                }*/
             }
+            return sb.ToString();
         }
         public Recept pretraziKnjiguRecepata(KnjigaRecepata knjigaRecepata, String naziv)
         {
