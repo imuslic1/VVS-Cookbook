@@ -5,8 +5,8 @@
 *.pdb
 *.cache
 
-Grupa4_Tim1_KnjigaRecepata/bin/*
-Grupa4_Tim1_KnjigaRecepata/obj/*
+Grupa4_Tim1_KnjigaRecepata/bin
+Grupa4_Tim1_KnjigaRecepata/obj
 
-KnjigaRecepataTest/bin/Debug/*
-KnjigaRecepataTest/obj/Debug/*
+KnjigaRecepataTest/bin
+KnjigaRecepataTest/obj
