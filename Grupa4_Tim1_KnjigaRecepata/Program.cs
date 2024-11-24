@@ -40,8 +40,8 @@ namespace Grupa4_Tim1_KnjigaRecepata
 
             //Random 10 sastojaka da mogu koristiti za različite recepte
             var sastojci = new List<Sastojak>{
-                new Sastojak(1, "Brašno", 76.3, 1.0, 10.0, 2.7, 0.02, Alergen.GLUTEN, 0.5, MjernaJedinica.GRAM),
-                new Sastojak(2, "Šećer", 99.8, 0.0, 0.0, 0.0, 0.01, null, 0.4, MjernaJedinica.GRAM),
+                new Sastojak(1, "Brasno", 76.3, 1.0, 10.0, 2.7, 0.02, Alergen.GLUTEN, 0.5, MjernaJedinica.GRAM),
+                new Sastojak(2, "Secer", 99.8, 0.0, 0.0, 0.0, 0.01, null, 0.4, MjernaJedinica.GRAM),
                 new Sastojak(3, "Maslac", 0.8, 81.0, 1.0, 0.0, 0.02, Alergen.LAKTOZA, 1.5, MjernaJedinica.GRAM),
                 new Sastojak(4, "Med", 82.4, 0.0, 0.3, 0.2, 0.02, Alergen.MED, 2.0, MjernaJedinica.SUPENA_KASIKA),
                 new Sastojak(5, "Mlijeko", 4.8, 3.4, 3.3, 0.0, 0.05, Alergen.LAKTOZA, 0.8, MjernaJedinica.MILILITAR),
@@ -49,7 +49,7 @@ namespace Grupa4_Tim1_KnjigaRecepata
                 new Sastojak(7, "Sol", 0.0, 0.0, 0.0, 0.0, 99.0, null, 0.05, MjernaJedinica.CAJNA_KASIKA),
                 new Sastojak(8, "Bademi", 21.6, 49.4, 21.2, 12.5, 0.01, Alergen.ORASASTI_PLODOVI, 5.0, MjernaJedinica.GRAM),
                 new Sastojak(9, "Luk", 9.3, 0.1, 1.1, 1.7, 0.01, null, 0.2, MjernaJedinica.GRAM),
-                new Sastojak(10, "Rajčica", 3.9, 0.2, 0.9, 1.2, 0.02, null, 0.3, MjernaJedinica.GRAM)
+                new Sastojak(10, "Rajcica", 3.9, 0.2, 0.9, 1.2, 0.02, null, 0.3, MjernaJedinica.GRAM)
             };
 
             var recepti = new List<Recept>
@@ -271,17 +271,23 @@ namespace Grupa4_Tim1_KnjigaRecepata
                                 korektanNaziv3 = true;
 
                             }
-                            catch (ArgumentException ex) { Console.WriteLine(ex.Message); Console.WriteLine("Unesite ponovno naziv recepta: "); }
+                            catch (Exception ex) { Console.WriteLine(ex.Message); Console.WriteLine("Unesite ponovno naziv recepta: "); }
                         }
                         ShoppingLista shoppingLista = new ShoppingLista(trazeniRecept1);
                         try
                         {
                             Console.WriteLine(sl.prikaziShoppingListu(shoppingLista));
                             Console.WriteLine("Ukoliko vec imate neke od ovih sastojaka, unesite 1 (ukoliko imate sve, unesite 0)");
-                            if (Convert.ToInt32(Console.ReadLine()) == 0) break;
-                            
-
-                            Console.WriteLine("Unesite sastojke koje već posjedujete (odvojite ih zarezom i razmakom: ", "): ");
+                            string izborPostojecihSastojaka = Convert.ToString(Console.ReadLine());
+                            if (izborPostojecihSastojaka == "0") {
+                                Console.WriteLine("Odlično, već imate sve sastojke za ovaj recept!");
+                                break;
+                            }
+                            if(izborPostojecihSastojaka != "1") {
+                                Console.WriteLine("Nevalidan unos!");
+                                break;
+                            }
+                            Console.WriteLine("Unesite sastojke koje već posjedujete (odvojite ih zarezom): ");
                             string postojeciSastojci = Convert.ToString(Console.ReadLine());
                             Console.WriteLine(sl.prikaziNedostajuceSastojke(trazeniRecept1, postojeciSastojci));
 

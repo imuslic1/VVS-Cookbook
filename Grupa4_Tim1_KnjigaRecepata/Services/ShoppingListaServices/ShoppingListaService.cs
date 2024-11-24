@@ -58,20 +58,22 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.ShoppingListaServices
         public string prikaziNedostajuceSastojke(Recept recept, string postojeci) {
             StringBuilder sb = new StringBuilder();
 
-            if (postojeci.Any(c => char.IsDigit(c) && c != ',' && c != ' ')) {
+            if (postojeci.Any(c => char.IsDigit(c) && c != ',')) {
                 throw new ArgumentException("Nedozvoljeni karakteri u listi sastojaka");
             }
 
-            string[] postojeciSastojci = postojeci.Split(", ");
+
+            string[] postojeciSastojci = postojeci.Contains(",") ? 
+                postojeci.Split(',').Select(s => s.Trim().ToLower()).ToArray()
+                : new[] { postojeci.Trim().ToLower() };
             sb.AppendLine("Nedostajuci sastojci za recept " + recept.name + ":");
             foreach (var sastojak in recept.sastojci) {
                 Sastojak s = sastojak.Key;
                 // Mozda s.naziv.ToLower(), nisam siguran treba li ili ne
-                if (!postojeciSastojci.Contains(s.naziv)) {
+                if (!postojeciSastojci.Contains(s.naziv.ToLower())) {
                     sb.AppendLine("- " + s.naziv);
                 }
             }
-            Console.WriteLine(sb.ToString());
             //Modularnost i fleksibilnost testiranja
             return sb.ToString();
         }
