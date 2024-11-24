@@ -18,5 +18,26 @@ namespace Grupa4_Tim1_KnjigaRecepata.Models
             this.ocjena = ocjena;
             this.komentar = komentar;  
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Ocjena other)
+            {
+                return id == other.id &&
+                       ocjena == other.ocjena &&
+                       komentar == other.komentar;
+            }
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            int hash = 17; 
+            hash = hash * 31 + id.GetHashCode();
+            hash = hash * 31 + ocjena.GetHashCode();
+            hash = hash * 31 + (komentar != null ? komentar.GetHashCode() : 0);
+            return hash;
+        }
+
     }
 }

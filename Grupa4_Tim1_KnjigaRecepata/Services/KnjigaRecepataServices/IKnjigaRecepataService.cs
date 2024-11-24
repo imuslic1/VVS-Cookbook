@@ -16,5 +16,6 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices
         void ispisiKnjiguRecepata(KnjigaRecepata knjigaRecepata);
         Recept pretraziKnjiguRecepata(KnjigaRecepata knjigaRecepata, String naziv);
         List<Recept> pretraziKnjiguRecepata(KnjigaRecepata knjigaRecepata, double ocjena);
+        List<Recept> receptiBezAlergena(KnjigaRecepata knjigaRecepata, List<Alergen> alergeni);
     }
 }

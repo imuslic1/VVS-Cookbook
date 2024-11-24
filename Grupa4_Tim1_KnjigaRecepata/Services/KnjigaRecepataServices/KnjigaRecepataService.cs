@@ -13,11 +13,11 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices
 {
     public class KnjigaRecepataService : IKnjigaRecepataService
     {
-        private readonly DbClass _db;
+        private readonly IDbClass _db;
         private readonly ReceptService _receptService;
         private readonly OcjenaService _ocjenaService;
 
-        public KnjigaRecepataService(DbClass db, ReceptService receptService, OcjenaService ocjenaService)
+        public KnjigaRecepataService(IDbClass db, ReceptService receptService, OcjenaService ocjenaService)
         {
             _db = db;
             _receptService = receptService;
@@ -90,6 +90,37 @@ namespace Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices
                 throw new Exception("Nijedan recept nije pronađen sa željenom ocjenom");
             }
             return pronađeniRecepti;
+        }
+
+        public List<Recept> receptiBezAlergena(KnjigaRecepata knjigaRecepata, List<Alergen> alergeni)
+        {
+            if (alergeni.Count == 0)
+            {
+                throw new ArgumentException("Potrebno je proslijediti alergen!");
+            }
+            var receptiBezAlergena = new List<Recept>();
+            foreach (var recept in knjigaRecepata.recepti)
+            {
+                var sastojci = recept.sastojci;
+                bool sadrziAlergen = false;
+                foreach (var sastojak in sastojci)
+                {
+                    if (sastojak.Key.alergen != null)
+                    {
+                        if (alergeni.Contains((Alergen)sastojak.Key.alergen))
+                        {
+                            sadrziAlergen = true;
+                            break;
+                        }
+                    }
+                }
+                if (!sadrziAlergen)
+                {
+                    receptiBezAlergena.Add(recept);
+                }
+            }
+            return receptiBezAlergena;
+
         }
     }
 }
