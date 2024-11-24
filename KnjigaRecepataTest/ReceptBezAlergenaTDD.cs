@@ -4,12 +4,6 @@ using Grupa4_Tim1_KnjigaRecepata.Services.KnjigaRecepataServices;
 using Grupa4_Tim1_KnjigaRecepata.Services.OcjenaServices;
 using Grupa4_Tim1_KnjigaRecepata.Services.ReceptServices;
 using Grupa4_Tim1_KnjigaRecepata.Services.SastojakServices;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KnjigaRecepataTest
 {
@@ -17,9 +11,10 @@ namespace KnjigaRecepataTest
     public class ReceptBezAlergenaTDD
     {
         static DbClass baza = new DbClass();
-        static SastojakService ss = new SastojakService(baza);
-        ReceptService rs = new ReceptService(baza, ss);
-        private static Recept r1, r2, r3, r4;
+        
+        KnjigaRecepataService krs = new KnjigaRecepataService(baza, new ReceptService(baza, new SastojakService(baza)), new OcjenaService());
+        private static KnjigaRecepata kr1, kr2, kr3;
+        private static Recept r1, r2, r3, r4, r5, r6;
 
         [ClassInitialize]
         public static void SetUp(TestContext tc)
@@ -32,6 +27,7 @@ namespace KnjigaRecepataTest
 
             var ocjene1 = new List<Ocjena> { ocjena5, ocjena1, ocjena4 };
             var ocjene2 = new List<Ocjena> { ocjena3, ocjena2 };
+            var ocjene5 = new List<Ocjena> { ocjena5 };
 
             var sastojci = new List<Sastojak> {
                 new Sastojak(1, "Brašno", 76.3, 1.0, 10.0, 2.7, 0.02, Alergen.GLUTEN, 0.5, MjernaJedinica.CASA),
@@ -46,44 +42,84 @@ namespace KnjigaRecepataTest
                 new Sastojak(10, "Rajčica", 3.9, 0.2, 0.9, 1.2, 0.02, null, 0.3, MjernaJedinica.GRAM)
             };
 
-             r1 = new Recept(2, "Pohovana piletina", VrstaJela.GLAVNO_JELO,
+            r1 = new Recept(2, "Pohovana piletina", VrstaJela.GLAVNO_JELO,
                             "Pohujte piletinu s brašnom i jajima, pržite do zlatne boje.", 30,
                             new Dictionary<Sastojak, double> { { sastojci[0], 100 }, { sastojci[4], 1 }, },
                             KompleksnostPripreme.SREDNJE_TESKO, ocjene1);
-             r2 = new Recept(4, "Rižoto sa safranom", VrstaJela.GLAVNO_JELO,
+            r2 = new Recept(4, "Rižoto sa safranom", VrstaJela.GLAVNO_JELO,
                             "Pirjajte rižu, dodajte šafran i vodu, kuhajte do mekane teksture.", 40,
                             new Dictionary<Sastojak, double> { { sastojci[0], 200 }, { sastojci[6], 1 }, { sastojci[7], 20 } },
                             KompleksnostPripreme.SREDNJE_TESKO, ocjene2);
-             r3 = new Recept(12, "Supa od rajcice", VrstaJela.PREDJELO,
+            r3 = new Recept(12, "Supa od rajcice", VrstaJela.PREDJELO,
                             "Pirjajte rajčice, dodajte vodu i začine.", 20,
                             new Dictionary<Sastojak, double> { { sastojci[3], 200 }, { sastojci[6], 1 } },
                             KompleksnostPripreme.LAKO, ocjene2);
 
-             r4 = new Recept(7, "Omlet sa sirom", VrstaJela.PREDJELO,
+            r4 = new Recept(7, "Omlet sa sirom", VrstaJela.PREDJELO,
                             "Izmiksajte jaja i sir, pecite u tavi.", 10,
                             new Dictionary<Sastojak, double> { { sastojci[3], 2 }, { sastojci[4], 5 }, { sastojci[0], 0.5 }, { sastojci[6], 0.5 } },
                             KompleksnostPripreme.LAKO, ocjene1);
+
+            r5 = new Recept(3, "Salata od rajcice", VrstaJela.SALATA,
+                    "Nasjeckajte rajčicu i luk, začinite solju.", 10,
+                    new Dictionary<Sastojak, double> { { sastojci[9], 100 }, { sastojci[8], 20 }, { sastojci[6], 0.5 } },
+                    KompleksnostPripreme.LAKO, ocjene5);
+
+            r6 = new Recept(13, "Salata od badema i spinata", VrstaJela.SALATA,
+                    "Pomiješajte špinat i bademe, začinite po želji.", 10,
+                    new Dictionary<Sastojak, double> { { sastojci[7], 30 }, { sastojci[8], 50 } },
+                    KompleksnostPripreme.LAKO, ocjene5);
+
+            kr1 = new KnjigaRecepata(0, VrstaJela.GLAVNO_JELO, new List<Recept> { r1, r2 });
+            kr2 = new KnjigaRecepata(1, VrstaJela.PREDJELO, new List<Recept> { r3, r4 });
+            kr3 = new KnjigaRecepata(2, VrstaJela.SALATA, new List<Recept> { r5, r6 });
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void reciptiBezAlergena_NulaRecepata_BacenIzuzetak()
+        public void receptiBezAlergena_NulaAlergena_BacenIzuzetak()
         {
-            List<Recept> receptiNula = new List<Recept>();
-            var res1 = rs.receptiBezAlergena(receptiNula, Alergen.GLUTEN);
+            var res1 = krs.receptiBezAlergena(kr1, new List<Alergen>());
         }
 
         [TestMethod]
-        public void reciptiBezAlergena_JedanRecept_IspravanRezultat()
+        public void receptiBezAlergena_NulaAlergena_OdgovarajuciTekstIzuzetka()
         {
-            List<Recept> receptiJedan = new List<Recept>();
-            receptiJedan.Add(r1);
+            try
+            {
+                var res2 = krs.receptiBezAlergena(kr2, new List<Alergen>());
+            }
+            catch(ArgumentException e)
+            {
+                Assert.AreEqual("Potrebno je proslijediti alergen!", e.Message);
+            }
+        }
 
-            var res2 = rs.receptiBezAlergena(receptiJedan, Alergen.GLUTEN);
+        [TestMethod]
+        public void receptiBezAlergena_JedanAlergen_IspravanRezultat()
+        {
+            var res3 = krs.receptiBezAlergena(kr1, new List<Alergen> { Alergen.GLUTEN });
+            List<Recept> receptiOcekivani = new List<Recept>();
 
-            List<Recept> receptiJedanOcekivani = new List<Recept>();
+            CollectionAssert.AreEqual(receptiOcekivani, res3);
+        }
 
-            Assert.AreEqual(res2, receptiJedanOcekivani); // Prazna lista jer je jedini sastojak sadrzavao gluten
+        [TestMethod]
+        public void receptiBezAlergena_ViseAlergena_JedanRezultat()
+        {
+            var res4 = krs.receptiBezAlergena(kr1, new List<Alergen> { Alergen.ORASASTI_PLODOVI, Alergen.MED });
+            List<Recept> receptiOcekivani = new List<Recept> { r1 };
+
+            CollectionAssert.AreEqual(receptiOcekivani, res4);
+        }
+
+        [TestMethod]
+        public void receptiBezAlergena_ViseAlergena_ViseRezultata()
+        {
+            var res5 = krs.receptiBezAlergena(kr3, new List<Alergen> { Alergen.LAKTOZA, Alergen.GLUTEN });
+            List<Recept> receptiOcekivani = new List<Recept> { r5, r6 };
+
+            CollectionAssert.AreEqual(receptiOcekivani, res5);
         }
     }
 }
